@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'perfil',
     loadComponent: () => import('./perfil/perfil.page').then(m => m.PerfilPage)
   },
+  {
+    path: 'reservar',
+    loadComponent: () => import('../reservar/reservar.page').then(m => m.ReservarPage)
+  },
 ];
 
 @NgModule({

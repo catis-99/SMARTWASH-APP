@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reservar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="status-wrapper">
+    <ion-chip color="success">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <ion-label>Disponible</ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-icon name="location"></ion-icon>
+      <ion-label>Viana do Castelo</ion-label>
+    </ion-chip>
+  </div>
+
+  <h2 class="machine-title">Máquina 11</h2>
+
+  <h3 class="section-title">Data</h3>
+
+  <ion-segment [(ngModel)]="selectedDate">
+    <ion-segment-button *ngFor="let d of dates" [value]="d.value">
+      <div class="day-title">{{ d.day }}</div>
+      <div class="day-number">{{ d.number }}</div>
+    </ion-segment-button>
+  </ion-segment>
+
+  <h3 class="section-title">Hora</h3>
+
+  <div class="time-selector">
+    <ion-button expand="block" fill="outline" (click)="openPicker()">
+      <ion-icon slot="start" name="time-outline"></ion-icon>
+      Selecionar Hora
+    </ion-button>
+  </div>
+
+  <div class="actions">
+    <ion-button fill="outline" color="medium">Cancelar</ion-button>
+    <ion-button color="primary">Confirmar</ion-button>
+  </div>
+
+</ion-content>

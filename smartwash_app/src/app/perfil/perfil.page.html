@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="profile-container">
+    <!-- Profile Photo and Name -->
+    <div class="profile-header">
+      <div class="profile-photo">
+        <!-- Você pode substituir o ion-icon por uma imagem real -->
+        <ion-icon name="person" *ngIf="!userPhoto"></ion-icon>
+        <img [src]="userPhoto" alt="Profile Photo" *ngIf="userPhoto">
+      </div>
+      <h2 class="profile-name">{{ userName }}</h2>
+    </div>
+
+    <!-- Menu Options -->
+    <ion-list class="menu-list" lines="none">
+      <!-- Cupões -->
+      <ion-item class="menu-item" button detail="true" (click)="navigateTo('cupoes')">
+        <div class="icon-container" slot="start">
+          <ion-icon name="ticket" class="menu-icon"></ion-icon>
+        </div>
+        <ion-label>Cupões</ion-label>
+      </ion-item>
+
+      <!-- Reservas -->
+      <ion-item class="menu-item" button detail="true" (click)="navigateTo('reservas')">
+        <div class="icon-container" slot="start">
+          <ion-icon name="checkmark-done" class="menu-icon"></ion-icon>
+        </div>
+        <ion-label>Reservas</ion-label>
+      </ion-item>
+
+      <!-- Dados pessoais -->
+      <ion-item class="menu-item" button detail="true" (click)="navigateTo('dados-pessoais')">
+        <div class="icon-container" slot="start">
+          <ion-icon name="people" class="menu-icon"></ion-icon>
+        </div>
+        <ion-label>Dados pessoais</ion-label>
+      </ion-item>
+
+      <!-- Ajuda -->
+      <ion-item class="menu-item" button detail="true" (click)="navigateTo('ajuda')">
+        <div class="icon-container" slot="start">
+          <ion-icon name="help-circle" class="menu-icon"></ion-icon>
+        </div>
+        <ion-label>Ajuda</ion-label>
+      </ion-item>
+
+      <!-- Apoio ao cliente -->
+      <ion-item class="menu-item" button detail="true" (click)="navigateTo('apoio-cliente')">
+        <div class="icon-container" slot="start">
+          <ion-icon name="headset" class="menu-icon"></ion-icon>
+        </div>
+        <ion-label>Apoio ao cliente</ion-label>
+      </ion-item>
+
+      <!-- Sair -->
+      <ion-item class="menu-item" button detail="true" (click)="logout()">
+        <div class="icon-container" slot="start">
+          <ion-icon name="log-out" class="menu-icon"></ion-icon>
+        </div>
+        <ion-label>Sair</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <ion-button fill="clear" (click)="navigateTo('home')">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" (click)="navigateTo('scan')">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-button>
+    <div class="center-fab">
+      <ion-fab-button color="success">
+        <ion-icon name="water"></ion-icon>
+      </ion-fab-button>
+    </div>
+    <ion-button fill="clear" (click)="navigateTo('historico')">
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="active">
+      <ion-icon name="person"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,12 @@
+.intro-slider-content {
+    --background: #ffffff;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 40px 20px;
+}

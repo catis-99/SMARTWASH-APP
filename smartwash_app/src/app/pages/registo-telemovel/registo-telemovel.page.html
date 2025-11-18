@@ -1,0 +1,32 @@
+<ion-content class="registo-content">
+  <div class="registo-container">
+    <!-- Título e Subtítulo -->
+    <div class="header-section">
+      <h1 class="title">Nº de telemóvel</h1>
+      <p class="subtitle">Por favor introduza o seu nº de telemóvel</p>
+    </div>
+
+    <!-- Campo de input -->
+    <div class="input-section">
+      <div class="phone-input-wrapper">
+        <span class="country-code">+351</span>
+        <ion-input type="tel" placeholder="Nº de telemóvel" [(ngModel)]="phoneNumber" class="phone-input"
+          maxlength="9"></ion-input>
+      </div>
+    </div>
+
+    <!-- Botão Enviar -->
+    <div class="button-section">
+      <ion-button expand="block" class="btn-enviar" (click)="enviar()">
+        Enviar
+      </ion-button>
+    </div>
+
+    <!-- Link para Login -->
+    <div class="footer-section">
+      <p class="login-link">
+        Já tens conta? <a (click)="navigateToLogin()">Login</a>
+      </p>
+    </div>
+  </div>
+</ion-content>

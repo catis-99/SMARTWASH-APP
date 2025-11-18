@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { IntroSlider4PageRoutingModule } from './intro-slider4-routing.module';
+import { MaquinaIniciadaPageRoutingModule } from './maquina-iniciada-routing.module';
 
-import { IntroSlider4Page } from './intro-slider4.page';
+import { MaquinaIniciadaPage } from './maquina-iniciada.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IntroSlider4PageRoutingModule
+    MaquinaIniciadaPageRoutingModule
   ],
-  declarations: [IntroSlider4Page]
+  declarations: [MaquinaIniciadaPage]
 })
-export class IntroSlider4PageModule {}
+export class MaquinaIniciadaPageModule {}

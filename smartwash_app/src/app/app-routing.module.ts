@@ -3,12 +3,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'intro',
+    loadComponent: () => import('./pages/intro/intro.page').then(m => m.IntroPage)
+  },
+  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'intro',
     pathMatch: 'full'
   },
   {
@@ -21,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'registo',
-    loadComponent: () => import('./pages/registo/registo.page').then(m => m.RegistoPage)
+    loadComponent: () => import('./pages/registo-telemovel/registo-telemovel.page').then(m => m.RegistoTelemovelPage)
   },
   {
     path: 'login',
@@ -54,6 +58,34 @@ const routes: Routes = [
   {
     path: 'confirmacao-pagamento',
     loadComponent: () => import('./pages/confirmacao-pagamento/confirmacao-pagamento.page').then(m => m.ConfirmacaoPagamentoPage)
+  },
+  {
+    path: 'validacao-telemovel',
+    loadChildren: () => import('./pages/validacao-telemovel/validacao-telemovel.module').then(m => m.ValidacaoTelemovelPageModule)
+  },
+  {
+    path: 'escolha-local',
+    loadChildren: () => import('./pages/escolha-local/escolha-local.module').then(m => m.EscolhaLocalPageModule)
+  },
+  {
+    path: 'encontra-nos',
+    loadChildren: () => import('./pages/encontra-nos/encontra-nos.module').then(m => m.EncontraNosPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then(m => m.InicioPageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./pages/mapa/mapa.module').then(m => m.MapaPageModule)
+  },
+  {
+    path: 'maquina-iniciada',
+    loadChildren: () => import('./pages/maquina-iniciada/maquina-iniciada.module').then(m => m.MaquinaIniciadaPageModule)
+  },
+  {
+    path: 'intro-slider4',
+    loadComponent: () => import('./pages/intro-slider4/intro-slider4.page').then(m => m.IntroSlider4Page)
   },
 ];
 

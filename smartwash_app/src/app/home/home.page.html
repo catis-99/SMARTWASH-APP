@@ -1,29 +1,149 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="custom-header">
   <ion-toolbar>
-    <ion-title>
-      SmartWash
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button routerLink="/perfil">
-        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <div class="header-wrapper">
+      <h1 class="greeting">Olá, Tiago!</h1>
+      <div class="header-icons">
+        <ion-button fill="clear" class="icon-button">
+          <ion-icon name="notifications-outline"></ion-icon>
+          <span class="badge"></span>
+        </ion-button>
+        <ion-button fill="clear" class="icon-button" routerLink="/perfil">
+          <ion-icon name="information-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <strong>Bem-vindo ao SmartWash</strong>
-    <p>A sua aplicação de lavagem inteligente</p>
 
-    <ion-button expand="block" routerLink="/reservar" style="margin-top: 20px;">
-      <ion-icon slot="start" name="calendar"></ion-icon>
-      Reservar Máquina
+  <!-- Localização -->
+  <div class="location-card">
+    <div class="location-icon">
+      <ion-icon name="location"></ion-icon>
+    </div>
+    <div class="location-info">
+      <h3>Escola</h3>
+      <p>Av. do Atlântico 644-4900, Viana do Castelo</p>
+    </div>
+  </div>
+
+  <!-- De que precisas? -->
+  <section class="services-section">
+    <h2 class="section-title">De que precisas?</h2>
+
+    <div class="services-grid">
+      <!-- Lavar -->
+      <div class="service-card" (click)="navigateTo('lavar')">
+        <div class="service-icon">
+          <ion-icon name="water-outline"></ion-icon>
+        </div>
+        <h3>Lavar</h3>
+        <p>Agenda facilmente a tua lavagem de roupa.</p>
+      </div>
+
+      <!-- Secar -->
+      <div class="service-card" (click)="navigateTo('secar')">
+        <div class="service-icon dryer">
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+        <h3>Secar</h3>
+        <p>Secagem rápida e eficiente, à tua medida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Em processo -->
+  <section class="in-progress-section">
+    <h2 class="section-title">Em processo</h2>
+
+    <div class="machine-list">
+      <!-- Máquina de lavar -->
+      <div class="machine-item">
+        <div class="machine-icon-wrapper">
+          <ion-icon name="water-outline"></ion-icon>
+        </div>
+        <div class="machine-details">
+          <span class="machine-name">Máquina de lavar 4</span>
+        </div>
+        <div class="machine-time">
+          <span class="time-value">3 minutos</span>
+          <span class="time-label">restantes</span>
+        </div>
+      </div>
+
+      <!-- Máquina de secar -->
+      <div class="machine-item">
+        <div class="machine-icon-wrapper dryer">
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+        <div class="machine-details">
+          <span class="machine-name">Máquina de secar 11</span>
+        </div>
+        <div class="machine-time">
+          <span class="time-value">35 minutos</span>
+          <span class="time-label">restantes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cupões disponíveis -->
+  <section class="coupons-section">
+    <h2 class="section-title">Cupões disponíveis</h2>
+
+    <div class="coupons-scroll">
+      <!-- Cupom 1 -->
+      <div class="coupon-card">
+        <div class="coupon-discount">-25%</div>
+        <div class="coupon-content">
+          <h4>LAVAGEM<br>NORMAL</h4>
+          <p class="coupon-validity">Até 18 Agosto</p>
+        </div>
+      </div>
+
+      <!-- Cupom 2 -->
+      <div class="coupon-card">
+        <div class="coupon-discount">-25%</div>
+        <div class="coupon-content">
+          <h4>LAVAGEM<br>NORMAL</h4>
+          <p class="coupon-validity">Até 18 Agosto</p>
+        </div>
+      </div>
+
+      <!-- Cupom 3 -->
+      <div class="coupon-card">
+        <div class="coupon-discount">-25%</div>
+        <div class="coupon-content">
+          <h4>LAVAGEM<br>NORMAL</h4>
+          <p class="coupon-validity">Até 18 Agosto</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaçamento para o footer -->
+  <div style="height: 100px;"></div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <ion-button fill="clear" class="nav-button active">
+      <ion-icon name="home"></ion-icon>
     </ion-button>
-
-    <ion-button expand="block" routerLink="/perfil" style="margin-top: 10px;">
-      <ion-icon slot="start" name="person"></ion-icon>
-      Ver Perfil
+    <ion-button fill="clear" class="nav-button" routerLink="/ler-qr">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-button>
+    <div class="center-fab">
+      <ion-fab-button color="success">
+        <ion-icon name="water"></ion-icon>
+      </ion-fab-button>
+    </div>
+    <ion-button fill="clear" class="nav-button" routerLink="/reservados">
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button" routerLink="/perfil">
+      <ion-icon name="person-outline"></ion-icon>
     </ion-button>
   </div>
+
 </ion-content>

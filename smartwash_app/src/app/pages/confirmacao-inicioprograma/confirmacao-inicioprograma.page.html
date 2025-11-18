@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>confirmacao_inicioprograma</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="close-btn">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">confirmacao_inicioprograma</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
+
+  <div class="container">
+    <h1 class="title">Máquina iniciada!</h1>
+
+    <p class="subtitle">
+      Enviaremos uma notificação quando estiver concluído!
+    </p>
+
+    <div class="icon-wrapper">
+      <img src="assets/imgs/laundry-start.png" alt="Máquina iniciada" />
+    </div>
+  </div>
+
+  <div class="footer">
+    <ion-button class="primary-btn">OK</ion-button>
+  </div>
+
 </ion-content>

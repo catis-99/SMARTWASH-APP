@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>confirma_reserva</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">confirma_reserva</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
+
+  <div class="container">
+
+    <h1 class="title">Máquina reservada com sucesso!</h1>
+
+    <p class="subtitle">
+      A máquina fica reservada até 15 minutos pós marcação.
+      A partir desse limite, considere a sua reserva cancelada.
+    </p>
+
+    <div class="icon-wrapper">
+      <img src="assets/imgs/calendar-check.png" alt="Reservado" />
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <ion-button class="primary-btn">Voltar ao ecrã inicial</ion-button>
+  </div>
+
 </ion-content>

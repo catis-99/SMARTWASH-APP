@@ -1,13 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>intro_slider3</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header translucent></ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">intro_slider3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="onboard-content" fullscreen>
+
+  <div class="text-block">
+    <h1 class="title">
+      Disponibilidade de máquinas
+    </h1>
+
+    <p class="subtitle">
+      Vê a disponibilidade de máquinas em<br />
+      tempo real e evita as filas de espera!
+    </p>
+  </div>
+
+  <div class="illustration-wrapper">
+    <img src="assets/onboarding/machine-connected.svg" class="illustration" />
+  </div>
+
+  <!-- Indicadores (bolinhas) -->
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot active"></div>
+    <div class="dot"></div>
+  </div>
+
+  <!-- Botões -->
+  <div class="footer-buttons">
+    <ion-button fill="outline" class="btn-ghost" (click)="onSkip()">
+      Ignorar
+    </ion-button>
+
+    <ion-button class="btn-next" (click)="onNext()">
+      Avançar
+    </ion-button>
+  </div>
+
 </ion-content>

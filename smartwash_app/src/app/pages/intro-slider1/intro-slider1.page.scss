@@ -1,0 +1,68 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+/* conteúdo principal */
+.welcome-content {
+  --background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* espaço superior para centrar visual */
+.top-space {
+  height: 40px;
+}
+
+/* bloco central com título, subtítulo e imagem */
+.center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* título */
+.title {
+  margin: 6px 0 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+}
+
+/* subtítulo */
+.subtitle {
+  margin: 0 0 40px;
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  max-width: 320px;
+}
+
+/* ilustração grande */
+.big-illustration {
+  width: 220px;
+  max-width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 24px;
+}
+
+/* área inferior com botão */
+.bottom-area {
+  padding-bottom: env(safe-area-inset-bottom);
+  margin-bottom: 12px;
+}
+
+.start-btn {
+  --border-radius: 10px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --background: #1f6bff; /* azul parecido com o design */
+  --box-shadow: none;
+  color: #ffffff;
+  font-weight: 500;
+}

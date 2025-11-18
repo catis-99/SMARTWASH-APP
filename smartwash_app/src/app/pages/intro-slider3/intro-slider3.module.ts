@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
 
-import { IntroSlider3PageRoutingModule } from './intro-slider3-routing.module';
-
-import { IntroSlider3Page } from './intro-slider3.page';
+import { OnboardingStep3Page } from './onboarding-step3.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IntroSlider3PageRoutingModule
+    RouterModule.forChild([
+      {
+        path: '',
+        component: OnboardingStep3Page
+      }
+    ])
   ],
-  declarations: [IntroSlider3Page]
+  declarations: [OnboardingStep3Page]
 })
-export class IntroSlider3PageModule {}
+export class OnboardingStep3PageModule {}

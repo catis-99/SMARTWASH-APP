@@ -21,39 +21,39 @@ const routes: Routes = [
   },
   {
     path: 'registo',
-    loadChildren: () => import('./pages/registo/registo.module').then(m => m.RegistoPageModule)
+    loadComponent: () => import('./pages/registo/registo.page').then(m => m.RegistoPage)
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
+    loadComponent: () => import('./pages/login/login.page').then(m => m.LoginPage)
   },
   {
     path: 'reservados',
-    loadChildren: () => import('./pages/reservados/reservados.module').then(m => m.ReservadosPageModule)
+    loadComponent: () => import('./pages/reservados/reservados.page').then(m => m.ReservadosPage)
   },
   {
     path: 'pagamento',
-    loadChildren: () => import('./pages/pagamento/pagamento.module').then(m => m.PagamentoPageModule)
+    loadComponent: () => import('./pages/pagamento/pagamento.page').then(m => m.PagamentoPage)
   },
   {
     path: 'selecao-maquinas',
-    loadChildren: () => import('./pages/selecao-maquinas/selecao-maquinas.module').then(m => m.SelecaoMaquinasPageModule)
+    loadComponent: () => import('./pages/selecao-maquinas/selecao-maquinas.page').then(m => m.SelecaoMaquinasPage)
   },
   {
     path: 'confirma-reserva',
-    loadChildren: () => import('./pages/confirmacao-reserva/confirma-reserva.module').then(m => m.ConfirmaReservaPageModule)
+    loadComponent: () => import('./pages/confirmacao-reserva/confirma-reserva.page').then(m => m.ConfirmaReservaPage)
   },
   {
     path: 'ler-qr',
-    loadChildren: () => import('./pages/ler-qr/ler-qr.module').then(m => m.LerQrPageModule)
+    loadComponent: () => import('./pages/ler-qr/ler-qr.page').then(m => m.LerQrPage)
   },
   {
     path: 'selecao-programa',
-    loadChildren: () => import('./pages/selecao-programa/selecao-programa.module').then(m => m.SelecaoProgramaPageModule)
+    loadComponent: () => import('./pages/selecao-programa/selecao-programa.page').then(m => m.SelecaoProgramaPage)
   },
   {
     path: 'confirmacao-pagamento',
-    loadChildren: () => import('./pages/confirmacao-pagamento/confirmacao-pagamento.module').then(m => m.ConfirmacaoPagamentoPageModule)
+    loadComponent: () => import('./pages/confirmacao-pagamento/confirmacao-pagamento.page').then(m => m.ConfirmacaoPagamentoPage)
   },
 ];
 

@@ -1,13 +1,67 @@
-<ion-header [translucent]="true">
+<ion-header class="custom-header" no-border>
   <ion-toolbar>
-    <ion-title>reservados</ion-title>
+    <div class="header-content">
+      <img src="assets/logo.png" class="header-logo" />
+      <h1 class="header-title">Reservas</h1>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">reservados</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <div class="reservas-list">
+
+    <!-- CARD 1 -->
+    <div class="reserva-card">
+      <div class="icon-col">
+        <img src="assets/icons/secagem.png" class="icon-machine" />
+      </div>
+
+      <div class="details-col">
+        <h2 class="tipo">Secagem</h2>
+        <p class="local">Monção, Viana do Castelo</p>
+        <p class="data">04 de Julho 2026</p>
+      </div>
+
+      <div class="button-col">
+        <button class="cancel-btn">Cancelar reserva</button>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="reserva-card">
+      <div class="icon-col">
+        <img src="assets/icons/lavagem.png" class="icon-machine" />
+      </div>
+
+      <div class="details-col">
+        <h2 class="tipo">Lavagem</h2>
+        <p class="local">Monção, Viana do Castelo</p>
+        <p class="data">13 de Julho 2026</p>
+      </div>
+
+      <div class="button-col">
+        <button class="cancel-btn">Cancelar reserva</button>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="reserva-card">
+      <div class="icon-col">
+        <img src="assets/icons/lavagem.png" class="icon-machine" />
+      </div>
+
+      <div class="details-col">
+        <h2 class="tipo">Lavagem</h2>
+        <p class="local">Monção, Viana do Castelo</p>
+        <p class="data">20 de Julho 2026</p>
+      </div>
+
+      <div class="button-col">
+        <button class="cancel-btn">Cancelar reserva</button>
+      </div>
+    </div>
+
+  </div>
+
 </ion-content>

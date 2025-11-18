@@ -1,0 +1,76 @@
+.onboard-content {
+  --background: #fff;
+  padding: 0 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-block {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.illustration-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.illustration {
+  width: 220px;
+  max-width: 65%;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d0d6e3;
+}
+
+.dot.active {
+  background: #1f6bff;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 20px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.btn-ghost {
+  --border-radius: 10px;
+  --border-color: #d6dffc;
+  --color: #5a6bbf;
+  width: 47%;
+}
+
+.btn-next {
+  width: 47%;
+  --border-radius: 10px;
+  --background: #1f6bff;
+  --color: #fff;
+}

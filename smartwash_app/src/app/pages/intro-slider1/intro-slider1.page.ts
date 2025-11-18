@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-intro-slider1',
-  templateUrl: './intro-slider1.page.html',
+  selector: 'app-welcome',
+  templateUrl: './welcome.page.html',
   styleUrls: ['./intro-slider1.page.scss'],
 })
-export class IntroSlider1Page implements OnInit {
+export class WelcomePage {
+  constructor(private router: Router) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  // Navega para a página principal (ajusta rota conforme a tua app)
+  onStart() {
+    // exemplo: this.router.navigateByUrl('/tabs'); ou '/home' ou '/reservas'
+    this.router.navigateByUrl('/home');
   }
-
 }

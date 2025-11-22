@@ -17,4 +17,8 @@ export class ConfirmacaoPagamentoPage implements OnInit {
   ngOnInit() {
   }
 
+  iniciarPrograma() {
+    console.log('Programa iniciado!');
+  }
+
 }

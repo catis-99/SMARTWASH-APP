@@ -1,0 +1,191 @@
+ion-header {
+    ion-toolbar {
+        --background: white;
+
+        ion-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        ion-button {
+            --color: #666;
+        }
+    }
+}
+
+ion-content {
+    --background: #f5f5f5;
+}
+
+.cupoes-container {
+    padding: 16px;
+    padding-bottom: 100px;
+}
+
+.section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 16px 0;
+}
+
+.cupoes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cupao-card {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &.utilizado {
+        background: #f0f0f0;
+        opacity: 0.7;
+    }
+
+    &.bloqueado {
+        opacity: 0.6;
+        filter: grayscale(50%);
+    }
+}
+
+.cupao-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cupao-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #5d7cff 0%, #7c9aff 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    ion-icon {
+        font-size: 32px;
+        color: white;
+    }
+}
+
+.cupao-info {
+    flex: 1;
+
+    h3 {
+        margin: 0 0 4px 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .horario {
+        margin: 0;
+        font-size: 13px;
+        color: #666;
+    }
+
+    .validade {
+        margin: 4px 0 0 0;
+        font-size: 12px;
+        color: #999;
+    }
+
+    .progresso {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 8px;
+        padding: 6px 10px;
+        background: rgba(255, 152, 0, 0.1);
+        border-radius: 8px;
+        width: fit-content;
+
+        ion-icon {
+            font-size: 14px;
+            color: #ff9800;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: 500;
+            color: #ff9800;
+        }
+    }
+}
+
+.cupao-desconto {
+    background: linear-gradient(135deg, #5dd8a8 0%, #3bc5a0 100%);
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-align: center;
+    min-width: 80px;
+    flex-shrink: 0;
+
+    &.bloqueado-badge {
+        background: linear-gradient(135deg, #ccc 0%, #aaa 100%);
+    }
+
+    &.utilizado-badge {
+        background: #d0d0d0;
+    }
+
+    .desconto-valor {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        line-height: 1;
+        margin-bottom: 2px;
+    }
+
+    .desconto-label {
+        font-size: 11px;
+        color: white;
+        opacity: 0.9;
+    }
+}
+
+.bloqueio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ion-icon {
+        font-size: 48px;
+        color: #999;
+    }
+}
+
+.ok-button {
+    position: fixed;
+    bottom: 20px;
+    left: 16px;
+    right: 16px;
+    --background: linear-gradient(135deg, #5d7cff 0%, #5dd8a8 100%);
+    --border-radius: 12px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    margin: 0;
+    z-index: 10;
+}

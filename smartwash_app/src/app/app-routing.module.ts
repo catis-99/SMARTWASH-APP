@@ -61,31 +61,47 @@ const routes: Routes = [
   },
   {
     path: 'validacao-telemovel',
-    loadChildren: () => import('./pages/validacao-telemovel/validacao-telemovel.module').then(m => m.ValidacaoTelemovelPageModule)
+    loadComponent: () => import('./pages/validacao-telemovel/validacao-telemovel.page').then(m => m.ValidacaoTelemovelPage)
   },
   {
     path: 'escolha-local',
-    loadChildren: () => import('./pages/escolha-local/escolha-local.module').then(m => m.EscolhaLocalPageModule)
+    loadComponent: () => import('./pages/escolha-local/escolha-local.page').then(m => m.EscolhaLocalPage)
   },
   {
     path: 'encontra-nos',
-    loadChildren: () => import('./pages/encontra-nos/encontra-nos.module').then(m => m.EncontraNosPageModule)
+    loadComponent: () => import('./pages/encontra-nos/encontra-nos.page').then(m => m.EncontraNosPage)
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./pages/inicio/inicio.module').then(m => m.InicioPageModule)
+    loadComponent: () => import('./pages/inicio/inicio.page').then(m => m.InicioPage)
   },
   {
     path: 'mapa',
-    loadChildren: () => import('./pages/mapa/mapa.module').then(m => m.MapaPageModule)
+    loadComponent: () => import('./pages/mapa/mapa.page').then(m => m.MapaPage)
   },
   {
     path: 'maquina-iniciada',
-    loadChildren: () => import('./pages/maquina-iniciada/maquina-iniciada.module').then(m => m.MaquinaIniciadaPageModule)
+    loadComponent: () => import('./pages/maquina-iniciada/maquina-iniciada.page').then(m => m.MaquinaIniciadaPage)
   },
   {
     path: 'intro-slider4',
-    loadComponent: () => import('./pages/intro-slider4/intro-slider4.page').then(m => m.IntroSlider4Page)
+    loadComponent: () => import('./pages/intro-slider4/intro-slider4.page').then(m => m.Slider4Page)
+  },
+  {
+    path: 'historico',
+    loadComponent: () => import('./pages/historico/historico.page').then(m => m.HistoricoPage)
+  },
+  {
+    path: 'ajuda',
+    loadComponent: () => import('./pages/ajuda/ajuda.page').then(m => m.AjudaPage)
+  },
+  {
+    path: 'confirmacao-inicioprograma',
+    loadComponent: () => import('./pages/confirmacao-inicioprograma/confirmacao-inicioprograma.page').then(m => m.ConfirmacaoInicioprogramaPage)
+  },
+  {
+    path: 'cupoes',
+    loadComponent: () => import('./pages/cupoes/cupoes.page').then(m => m.CupoesPage)
   },
 ];
 

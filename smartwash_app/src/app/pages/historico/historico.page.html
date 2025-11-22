@@ -1,13 +1,119 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>historico</ion-title>
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-title class="title-center">Histórico</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">historico</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <!-- Search bar -->
+  <div class="search-container">
+    <ion-searchbar placeholder="Procurar..." class="custom-searchbar"></ion-searchbar>
+  </div>
+
+  <!-- Secção de Hoje -->
+  <h2 class="section-title">Hoje</h2>
+
+  <!-- Card 1 -->
+  <ion-card class="history-card">
+    <ion-card-content>
+      <div class="row-top">
+        <div class="icon-box">
+          <img src="assets/img/maquina_secar.svg" />
+        </div>
+        <div class="info">
+          <h3 class="title">Secagem</h3>
+          <p class="location">Monção, Viana do Castelo</p>
+        </div>
+        <div class="date">06 Oct 2023, 6:06 PM</div>
+      </div>
+
+      <div class="row-bottom">
+        <span class="status">Completo</span>
+        <span class="price">3€</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Card 2 -->
+  <ion-card class="history-card">
+    <ion-card-content>
+      <div class="row-top">
+        <div class="icon-box">
+          <img src="assets/img/washing_machine.svg" />
+        </div>
+        <div class="info">
+          <h3 class="title">Lavagem</h3>
+          <p class="location">Monção, Viana do Castelo</p>
+        </div>
+        <div class="date">06 Oct 2023, 5:48 PM</div>
+      </div>
+
+      <div class="row-bottom">
+        <span class="status">Completo</span>
+        <span class="price">10€</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Card 3 -->
+  <ion-card class="history-card">
+    <ion-card-content>
+      <div class="row-top">
+        <div class="icon-box">
+          <img src="assets/icons/lavagem.png" />
+        </div>
+        <div class="info">
+          <h3 class="title">Lavagem</h3>
+          <p class="location">Monção, Viana do Castelo</p>
+        </div>
+        <div class="date">06 Oct 2023, 5:57 PM</div>
+      </div>
+
+      <div class="row-bottom">
+        <span class="status">Completo</span>
+        <span class="price">8€</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Secção 05 Oct -->
+  <h2 class="section-title">05 Oct 2023</h2>
+
+  <!-- Repeat cards… -->
+  <ion-card class="history-card">
+    <ion-card-content>
+      <div class="row-top">
+        <div class="icon-box">
+          <img src="assets/icons/lavagem.png" />
+        </div>
+        <div class="info">
+          <h3 class="title">Lavagem</h3>
+          <p class="location">Monção, Viana do Castelo</p>
+        </div>
+        <div class="date">05 Oct 2023, 6:46 PM</div>
+      </div>
+
+      <div class="row-bottom">
+        <span class="status">Completo</span>
+        <span class="price">8€</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+
+<!-- Bottom Tabs -->
+<ion-footer>
+  <ion-toolbar class="tabs-toolbar">
+    <div class="tabs-container">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-icon name="reader-outline"></ion-icon>
+      <div class="center-btn">
+        <img src="assets/icons/center-action.png" />
+      </div>
+      <ion-icon name="time-outline" class="active-tab"></ion-icon>
+      <ion-icon name="person-outline"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-footer>

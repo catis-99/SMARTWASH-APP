@@ -1,17 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MapaPage } from './mapa.page';
+import * as L from 'leaflet';
+import { AfterViewInit } from '@angular/core';
 
-describe('MapaPage', () => {
-  let component: MapaPage;
-  let fixture: ComponentFixture<MapaPage>;
+export class MapaPage implements AfterViewInit {
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(MapaPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  map: any;
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  ngAfterViewInit() {
+    this.map = L.map('map').setView([41.70532636891797, -8.818605859336698], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+    }).addTo(this.map);
+
+    L.marker([38.7223, -9.1393]).addTo(this.map)
+      .bindPopup('Lisboa')
+      .openPopup();
+  }
+}

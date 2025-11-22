@@ -1,13 +1,75 @@
-<ion-header [translucent]="true">
+<ion-header translucent>
   <ion-toolbar>
-    <ion-title>ajuda</ion-title>
+    <ion-title class="title">Ajuda</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ajuda</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ajuda-content" fullscreen>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-box">
+    <ion-icon name="search-outline" class="search-icon"></ion-icon>
+    <input type="text" placeholder="Procurar..." />
+  </div>
+
+  <!-- Lista de FAQ -->
+  <div class="faq-list">
+
+    <div class="faq-card">
+      <h3>Como sei qual programa usar?</h3>
+      <p>Consulte as etiquetas da roupa e separe por composições semelhantes.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Posso usar o meu próprio detergente ou a máquina fornece?</h3>
+      <p>Não, a máquina fornece detergente e amaciador.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Usam produtos hipoalergénicos ou ecológicos?</h3>
+      <p>Sim, os nossos detergentes são hipoalergénicos e ecológicos.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Qual é o horário da lavandaria?</h3>
+      <p>A lavandaria funciona 24 horas.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>As máquinas de secar aceitam peças delicadas?</h3>
+      <p>Não deve usar a máquina para secar roupas delicadas.</p>
+    </div>
+
+  </div>
+
 </ion-content>
+
+<!-- TAB BAR CUSTOMIZADA -->
+<ion-footer class="tab-footer">
+
+  <div class="tab-container">
+
+    <div class="tab-item">
+      <ion-icon name="home-outline"></ion-icon>
+    </div>
+
+    <div class="tab-item">
+      <ion-icon name="repeat-outline"></ion-icon>
+    </div>
+
+    <!-- BOTÃO CENTRAL -->
+    <div class="fab-center">
+      <img src="assets/logo.svg" />
+    </div>
+
+    <div class="tab-item">
+      <ion-icon name="time-outline"></ion-icon>
+    </div>
+
+    <div class="tab-item active">
+      <ion-icon name="help-circle"></ion-icon>
+    </div>
+
+  </div>
+
+</ion-footer>

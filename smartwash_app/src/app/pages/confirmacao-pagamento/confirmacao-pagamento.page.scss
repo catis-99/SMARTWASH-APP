@@ -1,0 +1,29 @@
+.container {
+    text-align: center;
+    padding: 24px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #666;
+    margin: 0 12px 32px;
+}
+
+.illustration {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 40px;
+    display: block;
+}
+
+.start-btn {
+    --background: #2563ff;
+    --border-radius: 10px;
+    height: 48px;
+}

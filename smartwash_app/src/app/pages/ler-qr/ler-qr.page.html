@@ -1,13 +1,61 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>ler_qr</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Ler QR Code</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ler_qr</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="scanner-container">
+    <!-- Container para o scanner -->
+    <div id="qr-reader" [hidden]="!isScanning"></div>
+
+    <!-- Overlay com moldura -->
+    <div class="scanner-overlay" [hidden]="!isScanning">
+      <div class="scanner-frame"></div>
+    </div>
+
+    <!-- Mensagem de instrução -->
+    <div class="instruction" *ngIf="isScanning">
+      <ion-icon name="scan-outline" class="scan-icon"></ion-icon>
+      <p>Aponte a câmera para o QR Code</p>
+    </div>
+
+    <!-- Resultado -->
+    <div class="result-container" *ngIf="!isScanning && scannedData">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-icon name="checkmark-circle" color="success"></ion-icon>
+            QR Code Lido!
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="result-text">{{ scannedData }}</p>
+
+          <ion-button expand="block" (click)="processScan()" class="process-btn">
+            Confirmar e Continuar
+          </ion-button>
+
+          <ion-button expand="block" fill="outline" (click)="startScanning()" class="scan-again-btn">
+            Ler Novamente
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <!-- Botão para iniciar scanner -->
+    <div class="start-container" *ngIf="!isScanning && !scannedData">
+      <ion-icon name="qr-code-outline" class="big-icon"></ion-icon>
+      <h2>Leitura de QR Code</h2>
+      <p>Escaneie o QR Code da máquina SmartWash para iniciar</p>
+
+      <ion-button expand="block" (click)="startScanning()" class="start-btn">
+        <ion-icon slot="start" name="camera"></ion-icon>
+        Iniciar Scanner
+      </ion-button>
+    </div>
+  </div>
 </ion-content>

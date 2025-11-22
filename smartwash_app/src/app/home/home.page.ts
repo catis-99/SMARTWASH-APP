@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class HomePage {
 
   userName: string = 'Tiago';
+  showCentralMenu: boolean = false;
   currentLocation = {
     name: 'Escola',
     address: 'Av. do Atlântico 644-4900, Viana do Castelo'
@@ -48,6 +49,15 @@ export class HomePage {
 
   constructor(private router: Router) { }
 
+  toggleCentralMenu() {
+    this.showCentralMenu = !this.showCentralMenu;
+  }
+
+  navigateAndClose(route: string) {
+    this.showCentralMenu = false;
+    this.router.navigate([route]);
+  }
+
   navigateTo(service: string) {
     switch (service) {
       case 'lavar':
@@ -55,6 +65,9 @@ export class HomePage {
         break;
       case 'secar':
         this.router.navigate(['/selecao-maquinas']);
+        break;
+      case 'reservados':
+        this.router.navigate(['/reservados']);
         break;
       default:
         console.log('Navegar para:', service);

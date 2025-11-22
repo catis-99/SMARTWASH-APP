@@ -1,0 +1,113 @@
+.ajuda-content {
+    --background: #fff;
+    padding: 0 18px;
+}
+
+/* Header */
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* SEARCH BOX */
+.search-box {
+    margin-top: 20px;
+    background: #e0e8ff;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #5c7cff;
+}
+
+/* FAQ LIST */
+
+.faq-list {
+    margin-top: 22px;
+}
+
+.faq-card {
+    background: #f7f7f7;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.faq-card h3 {
+    font-size: 16px;
+    margin: 0 0 6px;
+    font-weight: 600;
+    color: #111;
+}
+
+.faq-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* TAB BAR CUSTOM */
+
+.tab-footer {
+    background: transparent;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tab-container {
+    background: #1f6bff;
+    height: 64px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.tab-item {
+    flex: 1;
+    text-align: center;
+}
+
+.tab-item ion-icon {
+    font-size: 24px;
+    color: #dbe8ff;
+}
+
+.tab-item.active ion-icon {
+    color: #ffffff;
+}
+
+/* BOTÃO CENTRAL */
+.fab-center {
+    position: absolute;
+    top: -28px;
+    width: 56px;
+    height: 56px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fab-center img {
+    width: 32px;
+}

@@ -1,13 +1,43 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>mapa</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Escolha a localização</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">mapa</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Barra de pesquisa -->
+  <div class="search-container">
+    <ion-searchbar [(ngModel)]="searchQuery" placeholder="Procurar..." (ionInput)="onSearch($event)"
+      class="custom-searchbar">
+    </ion-searchbar>
+  </div>
+
+  <!-- Mapa -->
+  <div id="map"></div>
+
+  <!-- Botão Guardar flutuante -->
+  <div class="save-button-container">
+    <ion-button class="save-button" (click)="saveLocation()">
+      <ion-icon slot="start" name="bookmark"></ion-icon>
+      Guardar
+    </ion-button>
+  </div>
+
+  <!-- Painel inferior de confirmação -->
+  <div class="bottom-panel" [class.expanded]="selectedLocation">
+    <div class="location-info">
+      <ion-icon name="location-outline" class="location-icon"></ion-icon>
+      <div class="location-text">
+        <h3>{{ selectedLocation ? 'Confirmar' : 'Selecione uma localização' }}</h3>
+        <p *ngIf="selectedLocation">{{ selectedAddress }}</p>
+      </div>
+    </div>
+
+    <ion-button expand="block" class="confirm-button" [disabled]="!selectedLocation" (click)="confirmLocation()">
+      Confirmar locação
+    </ion-button>
+  </div>
 </ion-content>

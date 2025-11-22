@@ -134,8 +134,8 @@
       <ion-icon name="qr-code-outline"></ion-icon>
     </ion-button>
     <div class="center-fab">
-      <ion-fab-button color="success">
-        <ion-icon name="water"></ion-icon>
+      <ion-fab-button (click)="navigateTo('reservados')" class="central-fab">
+        <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
       </ion-fab-button>
     </div>
     <ion-button fill="clear" class="nav-button" routerLink="/reservados">

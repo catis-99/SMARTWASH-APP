@@ -1,13 +1,95 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>selecao-programa</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-center">Máquina 11</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">selecao-programa</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <!-- Estado + Localização -->
+  <div class="status-container">
+    <div class="status-item">
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+      <span>Disponível</span>
+    </div>
+
+    <div class="status-item">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>Viana do Castelo</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">Escolha o tipo de lavagem</h2>
+
+  <!-- Opção 1 (selecionada) -->
+  <div class="option-card selected">
+    <div class="row-top">
+      <div class="icon-box">
+        <img src="assets/icons/wash.png">
+      </div>
+
+      <div class="info">
+        <h3 class="title">Lavagem normal - 30 min</h3>
+        <span class="price">6€</span>
+      </div>
+
+      <ion-radio checked></ion-radio>
+    </div>
+
+    <div class="row-bottom">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <span>Para as lavagens do dia-a-dia</span>
+    </div>
+  </div>
+
+  <!-- Opção 2 -->
+  <div class="option-card">
+    <div class="row-top">
+      <div class="icon-box">
+        <img src="assets/icons/wash.png">
+      </div>
+
+      <div class="info">
+        <h3 class="title">Lavagem água quente</h3>
+        <span class="price">10€</span>
+      </div>
+
+      <ion-radio></ion-radio>
+    </div>
+
+    <div class="row-bottom">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <span>Para maior sujidade e nódoas mais exigentes</span>
+    </div>
+  </div>
+
+  <!-- Opção 3 -->
+  <div class="option-card">
+    <div class="row-top">
+      <div class="icon-box">
+        <img src="assets/icons/wash.png">
+      </div>
+
+      <div class="info">
+        <h3 class="title">Lavagem delicada</h3>
+        <span class="price">8€</span>
+      </div>
+
+      <ion-radio></ion-radio>
+    </div>
+
+    <div class="row-bottom">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <span>Para as peças que exigem cuidado extra</span>
+    </div>
+  </div>
+
+  <!-- Botão confirmar -->
+  <div class="confirm-container">
+    <ion-button expand="block" class="btn-confirmar">Confirmar</ion-button>
+  </div>
+
 </ion-content>

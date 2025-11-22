@@ -1,0 +1,94 @@
+.title-center {
+    text-align: center;
+    font-weight: 600;
+}
+
+.status-container {
+    display: flex;
+    gap: 15px;
+    margin: 15px;
+    color: #5e5e5e;
+
+    .status-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        ion-icon {
+            color: #4a7bff;
+            font-size: 20px;
+        }
+    }
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px;
+}
+
+.option-card {
+    background: #f8f8f8;
+    margin: 12px 15px;
+    padding: 18px;
+    border-radius: 12px;
+
+    .row-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon-box img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .info {
+            flex: 1;
+            padding-left: 12px;
+
+            .title {
+                margin: 0;
+                font-size: 17px;
+                font-weight: 600;
+            }
+
+            .price {
+                color: #4a7bff;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .row-bottom {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 12px;
+        font-size: 13px;
+        color: #666;
+
+        ion-icon {
+            color: #4a7bff;
+            font-size: 18px;
+        }
+    }
+}
+
+/* Quando selecionada */
+.option-card.selected {
+    background: #e0ecff;
+    border: 2px solid #4a7bff;
+}
+
+.confirm-container {
+    padding: 20px 15px;
+}
+
+.btn-confirmar {
+    --background: #1a68ff;
+    --border-radius: 10px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 600;
+}

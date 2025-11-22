@@ -1,13 +1,85 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>cupoes</ion-title>
+    <ion-title class="ion-text-center">Cupões</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="fechar()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cupoes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="cupoes-container">
+
+    <!-- Seção: Por utilizar -->
+    <div class="section">
+      <h2 class="section-title">Por utilizar</h2>
+
+      <div class="cupoes-list">
+        <div *ngFor="let cupao of cupoesDisponiveis" class="cupao-card" [class.bloqueado]="!cupao.desbloqueado">
+
+          <div class="cupao-content">
+            <div class="cupao-icon">
+              <ion-icon name="water-outline"></ion-icon>
+            </div>
+
+            <div class="cupao-info">
+              <h3>{{ cupao.tipo }}</h3>
+              <p class="horario">{{ cupao.horario }}</p>
+              <p class="validade">{{ cupao.validade }}</p>
+
+              <!-- Indicador de progresso para cupões bloqueados -->
+              <div *ngIf="!cupao.desbloqueado" class="progresso">
+                <ion-icon name="lock-closed"></ion-icon>
+                <span>Faltam {{ getLavagensFaltantes(cupao) }} lavagens</span>
+              </div>
+            </div>
+
+            <div class="cupao-desconto" [class.bloqueado-badge]="!cupao.desbloqueado">
+              <div class="desconto-valor">{{ cupao.desconto }}%</div>
+              <div class="desconto-label">Desconto</div>
+            </div>
+          </div>
+
+          <!-- Overlay para cupões bloqueados -->
+          <div *ngIf="!cupao.desbloqueado" class="bloqueio-overlay">
+            <ion-icon name="lock-closed"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção: Utilizados -->
+    <div class="section">
+      <h2 class="section-title">Utilizados</h2>
+
+      <div class="cupoes-list">
+        <div *ngFor="let cupao of cupoesUtilizados" class="cupao-card utilizado">
+          <div class="cupao-content">
+            <div class="cupao-icon">
+              <ion-icon name="water-outline"></ion-icon>
+            </div>
+
+            <div class="cupao-info">
+              <h3>{{ cupao.tipo }}</h3>
+              <p class="horario">{{ cupao.horario }}</p>
+              <p class="validade">{{ cupao.validade }}</p>
+            </div>
+
+            <div class="cupao-desconto utilizado-badge">
+              <div class="desconto-valor">{{ cupao.desconto }}%</div>
+              <div class="desconto-label">Desconto</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão OK -->
+    <ion-button expand="block" class="ok-button" (click)="fechar()">
+      OK
+    </ion-button>
+
+  </div>
 </ion-content>

@@ -1,0 +1,59 @@
+.container {
+    padding: 24px;
+    text-align: center;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 15px;
+    margin: 12px 0 32px;
+}
+
+.code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    ion-input {
+        width: 55px;
+        height: 55px;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+.btn-confirmar {
+    --background: #2563ff;
+    --border-radius: 10px;
+    height: 48px;
+    margin-top: 10px;
+}
+
+.resend {
+    margin-top: 16px;
+    color: #666;
+
+    .link {
+        color: #2563ff;
+        font-weight: 500;
+    }
+}
+
+.login {
+    margin-top: 80px;
+    color: #666;
+
+    .link {
+        color: #2563ff;
+        font-weight: 500;
+    }
+}

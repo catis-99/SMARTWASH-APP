@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>confirmacao_pagamento</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Máquina pronta</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">confirmacao_pagamento</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
+
+  <div class="container">
+
+    <h2 class="title">Pagamento completo!</h2>
+
+    <p class="subtitle">
+      Coloque a sua roupa na máquina de lavar.
+      Quando acabar este passo, carregue em
+      <strong>"Iniciar programa"</strong>
+    </p>
+
+    <ion-img src="assets/img/confirmar-pagamento.svg" class="illustration"></ion-img>
+
+    <ion-button expand="block" class="start-btn" (click)="iniciarPrograma()">
+      Iniciar Programa
+    </ion-button>
+
+  </div>
+
 </ion-content>

@@ -61,10 +61,10 @@ export class HomePage {
   navigateTo(service: string) {
     switch (service) {
       case 'lavar':
-        this.router.navigate(['/selecao-maquinas']);
+        this.router.navigate(['/selecao-lavagem']);
         break;
       case 'secar':
-        this.router.navigate(['/selecao-maquinas']);
+        this.router.navigate(['/selecao-secagem']);
         break;
       case 'reservados':
         this.router.navigate(['/reservados']);

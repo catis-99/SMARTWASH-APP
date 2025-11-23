@@ -13,6 +13,7 @@ ion-toolbar {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 18px;
+  color: #333;
 }
 
 .subtitle {
@@ -37,12 +38,31 @@ ion-toolbar {
 .footer {
   padding: 20px;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .primary-btn {
-  --background: #246bfd;
-  width: 100%;
-  height: 48px;
+  --background: #4d7cfe;
+  --color: #ffffff;
+  height: 56px;
   font-weight: 600;
-  border-radius: 10px;
+  font-size: 16px;
+  --border-radius: 12px;
+  text-transform: none;
+  margin: 0;
+}
+
+.secondary-btn {
+  --background: transparent;
+  --border-color: #4d7cfe;
+  --border-width: 2px;
+  --color: #4d7cfe;
+  height: 56px;
+  font-weight: 600;
+  font-size: 16px;
+  --border-radius: 12px;
+  text-transform: none;
+  margin: 0;
 }

@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-confirma-reserva',
-  templateUrl: './confirma-reserva.page.html',
-  styleUrls: ['./confirma-reserva.page.scss'],
+  selector: 'app-confirmacao-reserva',
+  templateUrl: './confirmacao-reserva.page.html',
+  styleUrls: ['./confirmacao-reserva.page.scss'],
   standalone: true,
   imports: [CommonModule, FormsModule, IonicModule]
 })
-export class ConfirmaReservaPage implements OnInit {
+export class ConfirmacaoReservaPage implements OnInit {
 
   constructor() { }
 

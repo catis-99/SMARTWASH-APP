@@ -1,10 +1,16 @@
-<ion-header translucent>
+<ion-header>
   <ion-toolbar>
-    <ion-title class="title">Ajuda</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navigateTo('/home')">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ajuda-content" fullscreen>
+
+  <h1 class="title">Ajuda</h1>
 
   <!-- Barra de pesquisa -->
   <div class="search-box">
@@ -49,25 +55,25 @@
 
   <div class="tab-container">
 
-    <div class="tab-item">
-      <ion-icon name="home-outline"></ion-icon>
+    <div class="tab-item" (click)="navigateTo('/home')">
+      <ion-icon name="home"></ion-icon>
     </div>
 
-    <div class="tab-item">
-      <ion-icon name="repeat-outline"></ion-icon>
+    <div class="tab-item" (click)="navigateTo('/ler-qr')">
+      <ion-icon name="qr-code-outline"></ion-icon>
     </div>
 
     <!-- BOTÃO CENTRAL -->
-    <div class="fab-center">
-      <img src="assets/logo.svg" />
+    <div class="fab-center" (click)="navigateTo('/reservados')">
+      <img src="assets/img/logo_menucentral.svg" />
     </div>
 
-    <div class="tab-item">
+    <div class="tab-item" (click)="navigateTo('/historico')">
       <ion-icon name="time-outline"></ion-icon>
     </div>
 
-    <div class="tab-item active">
-      <ion-icon name="help-circle"></ion-icon>
+    <div class="tab-item" (click)="navigateTo('/perfil')">
+      <ion-icon name="person-outline"></ion-icon>
     </div>
 
   </div>

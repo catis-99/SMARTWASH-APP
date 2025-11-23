@@ -1,13 +1,41 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>encontra-nos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">encontra-nos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="encontra-nos-container">
+    <!-- Título -->
+    <div class="page-header">
+      <h1>Encontra-nos</h1>
+    </div>
+
+    <!-- Barra de pesquisa -->
+    <div class="search-container">
+      <ion-searchbar placeholder="Procurar..." [(ngModel)]="searchText" (ionInput)="onSearch($event)">
+      </ion-searchbar>
+    </div>
+
+    <!-- Mapa de Portugal -->
+    <div class="map-container">
+      <img src="assets/img/mapa-portugal.svg" alt="Mapa de Portugal" class="portugal-map">
+
+      <!-- Marcadores de localização -->
+      <div class="location-markers">
+        <ion-icon *ngFor="let location of locations" name="location" class="location-marker"
+          [style.top.%]="location.top" [style.left.%]="location.left" (click)="selectLocation(location)">
+        </ion-icon>
+      </div>
+    </div>
+
+    <!-- Botão de confirmação -->
+    <div class="button-container">
+      <ion-button expand="block" class="confirm-button" (click)="confirmLocation()">
+        Confirmar localização
+      </ion-button>
+    </div>
+  </div>
 </ion-content>

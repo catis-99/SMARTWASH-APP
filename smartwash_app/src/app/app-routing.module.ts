@@ -40,12 +40,16 @@ const routes: Routes = [
     loadComponent: () => import('./pages/pagamento/pagamento.page').then(m => m.PagamentoPage)
   },
   {
-    path: 'selecao-maquinas',
-    loadComponent: () => import('./pages/selecao-maquinas/selecao-maquinas.page').then(m => m.SelecaoMaquinasPage)
+    path: 'selecao-lavagem',
+    loadComponent: () => import('./pages/selecao-lavagem/selecao-lavagem.page').then(m => m.SelecaoLavagemPage)
   },
   {
-    path: 'confirma-reserva',
-    loadComponent: () => import('./pages/confirmacao-reserva/confirma-reserva.page').then(m => m.ConfirmaReservaPage)
+    path: 'selecao-secagem',
+    loadComponent: () => import('./pages/selecao-secagem/selecao-secagem.page').then(m => m.SelecaoSecagemPage)
+  },
+  {
+    path: 'confirmacao-reserva',
+    loadComponent: () => import('./pages/confirmacao-reserva/confirmacao-reserva.page').then(m => m.ConfirmacaoReservaPage)
   },
   {
     path: 'ler-qr',

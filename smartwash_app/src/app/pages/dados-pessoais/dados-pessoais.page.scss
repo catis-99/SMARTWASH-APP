@@ -1,0 +1,116 @@
+.title-center {
+    text-align: center;
+    font-weight: 600;
+}
+
+.profile-container {
+    text-align: center;
+    margin-top: 25px;
+
+    .profile-img {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile-name {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .email-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        background: #eef2ff;
+        padding: 12px 18px;
+        border-radius: 12px;
+        margin: 15px auto;
+        width: 80%;
+
+        ion-icon {
+            color: #4a7bff;
+            font-size: 20px;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+.options-container {
+    margin-top: 10px;
+    padding: 0 15px;
+
+    .option-item {
+        background: #f7f7f7;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            ion-icon:first-child {
+                font-size: 28px;
+                color: #4a7bff;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        ion-icon[name="chevron-forward-outline"] {
+            font-size: 22px;
+            color: #777;
+        }
+    }
+}
+
+/* Tabs inferiores */
+.tabs-toolbar {
+    --background: #1663ff;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    position: relative;
+
+    ion-icon {
+        font-size: 26px;
+        color: white;
+        opacity: 0.7;
+    }
+
+    .active-tab {
+        opacity: 1;
+    }
+
+    .center-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+}

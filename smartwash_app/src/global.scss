@@ -38,3 +38,12 @@
 
 /* Leaflet CSS */
 @import "~leaflet/dist/leaflet.css";
+
+/* Global styles */
+ion-content {
+    --background: #ffffff;
+}
+
+ion-toolbar {
+    --background: #ffffff;
+}

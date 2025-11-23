@@ -1,13 +1,185 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>notificacoes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-center">Notificações</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">notificacoes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <!-- Hoje -->
+  <h3 class="section-title">Hoje</h3>
+
+  <div class="group-card">
+    <div class="notif-item unread">
+      <div class="left">
+        <div class="icon-circle">
+          <ion-icon name="checkmark-done-circle"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">Tiago, a lavagem terminou!</span>
+            <span class="time">Just Now</span>
+          </div>
+          <div class="subtitle">Detalhes da notificação ou uma pequena descrição</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle blue">
+          <ion-icon name="ticket"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">50% na próxima secagem</span>
+            <span class="time">3:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle">
+          <ion-icon name="megaphone-outline"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">Olha as novas ofertas!</span>
+            <span class="time">11:00 AM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 Oct 2023 -->
+  <h3 class="section-title">06 Oct 2023</h3>
+
+  <div class="group-card">
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle">
+          <ion-icon name="checkmark-done-circle"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">Tiago, a lavagem terminou!</span>
+            <span class="time">11:47 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle blue">
+          <ion-icon name="pricetag-outline"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">Desconto da semana</span>
+            <span class="time">9:08 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">Máquina de lavar disponível</span>
+            <span class="time">9:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 Oct 2023 -->
+  <h3 class="section-title">05 Oct 2023</h3>
+
+  <div class="group-card">
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle">
+          <ion-icon name="checkmark-done-circle"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">Tiago, a lavagem terminou!</span>
+            <span class="time">2:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle blue">
+          <ion-icon name="ticket"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">5 novos cupões!</span>
+            <span class="time">11:37 AM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notif-item">
+      <div class="left">
+        <div class="icon-circle">
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        </div>
+        <div class="body">
+          <div class="title-row">
+            <span class="notif-title">A secagem está disponível</span>
+            <span class="time">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </ion-content>
+
+
+<!-- TAB BAR CUSTOMIZADA -->
+<ion-footer class="tab-footer">
+
+  <div class="tab-container">
+
+    <div class="tab-item" (click)="navigateTo('/home')">
+      <ion-icon name="home"></ion-icon>
+    </div>
+
+    <div class="tab-item" (click)="navigateTo('/ler-qr')">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </div>
+
+    <!-- BOTÃO CENTRAL -->
+    <div class="fab-center" (click)="navigateTo('/reservados')">
+      <img src="assets/img/logo_menucentral.svg" />
+    </div>
+
+    <div class="tab-item" (click)="navigateTo('/historico')">
+      <ion-icon name="time-outline"></ion-icon>
+    </div>
+
+    <div class="tab-item" (click)="navigateTo('/perfil')">
+      <ion-icon name="person-outline"></ion-icon>
+    </div>
+
+  </div>
+
+</ion-footer>

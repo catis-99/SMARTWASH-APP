@@ -1,0 +1,73 @@
+.title-center {
+    text-align: center;
+    font-weight: 600;
+}
+
+.section-title {
+    margin: 18px 18px 6px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #6b6b6b;
+}
+
+.payment-item {
+    margin: 12px 16px;
+    padding: 14px;
+    background: #f7f7f9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+}
+
+.icon-box {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 10px;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ion-icon {
+        font-size: 22px;
+        color: #1a68ff;
+    }
+
+    img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+    }
+}
+
+/* Cupões é lilás */
+.icon-box.purple {
+    background: #ece6ff;
+
+    ion-icon {
+        color: #6b4bff;
+    }
+}
+
+.text-block {
+    flex: 1;
+
+    .item-title {
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .item-sub {
+        margin-top: 3px;
+        font-size: 13px;
+        color: #7a7a7a;
+    }
+}
+
+.arrow {
+    color: #9b9b9b;
+    font-size: 20px;
+}

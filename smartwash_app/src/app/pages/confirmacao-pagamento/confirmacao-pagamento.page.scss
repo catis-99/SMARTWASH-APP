@@ -1,3 +1,23 @@
+ion-content {
+    --background: #ffffff;
+}
+
+ion-toolbar {
+    --background: #ffffff;
+    --border-width: 0;
+    --border-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+ion-header {
+    box-shadow: none !important;
+}
+
+ion-header::after {
+    display: none;
+}
+
 .container {
     text-align: center;
     padding: 24px;
@@ -7,6 +27,7 @@
     font-size: 22px;
     font-weight: 700;
     margin-top: 16px;
+    color: #333;
 }
 
 .subtitle {
@@ -26,4 +47,5 @@
     --background: #2563ff;
     --border-radius: 10px;
     height: 48px;
+    color: #fff;
 }

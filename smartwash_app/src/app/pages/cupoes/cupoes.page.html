@@ -1,16 +1,12 @@
-<ion-header class="ion-no-border">
+<ion-header>
   <ion-toolbar>
-    <ion-title class="ion-text-center">Cupões</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="fechar()">
-        <ion-icon name="close" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="cupoes-container">
+
+    <h1>Cupões</h1>
 
     <!-- Seção: Por utilizar -->
     <div class="section">
@@ -21,7 +17,7 @@
 
           <div class="cupao-content">
             <div class="cupao-icon">
-              <ion-icon name="water-outline"></ion-icon>
+              <img src="assets/img/washing_machine.svg" alt="Washing Machine" />
             </div>
 
             <div class="cupao-info">
@@ -58,7 +54,7 @@
         <div *ngFor="let cupao of cupoesUtilizados" class="cupao-card utilizado">
           <div class="cupao-content">
             <div class="cupao-icon">
-              <ion-icon name="water-outline"></ion-icon>
+              <img src="assets/img/washing_machine.svg" alt="Washing Machine" />
             </div>
 
             <div class="cupao-info">

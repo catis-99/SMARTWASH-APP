@@ -1,13 +1,98 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>pagamento</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-center">Pagamento</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pagamento</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <!-- Cupões -->
+  <div class="payment-item">
+    <div class="icon-box purple">
+      <ion-icon name="ticket" class="menu-icon"></ion-icon>
+    </div>
+
+    <div class="text-block">
+      <p class="item-title">Cupões</p>
+      <p class="item-sub">3 cupões disponíveis</p>
+    </div>
+
+    <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+  </div>
+
+  <h3 class="section-title">A tua reserva</h3>
+
+  <!-- Cartão principal -->
+  <div class="payment-item">
+    <div class="icon-box card-icon">
+      <img src="assets/img/card 1.svg" alt="">
+    </div>
+
+    <div class="text-block">
+      <p class="item-title">Cartão que termina em 1234</p>
+      <p class="item-sub">12/25</p>
+    </div>
+  </div>
+
+  <!-- MB WAY -->
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="assets/img/mbway-seeklogo.svg" alt="">
+    </div>
+
+    <div class="text-block">
+      <p class="item-title">MB WAY</p>
+    </div>
+  </div>
+
+  <!-- PayPal -->
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="assets/img/paypal-color-svgrepo-com.svg" alt="">
+    </div>
+
+    <div class="text-block">
+      <p class="item-title">Paypal</p>
+      <p class="item-sub">tiagolourenco@ipvc.pt</p>
+    </div>
+  </div>
+
+  <!-- Dinheiro -->
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="assets/img/cash-svgrepo-com.svg" alt="">
+    </div>
+
+    <div class="text-block">
+      <p class="item-title">Dinheiro</p>
+    </div>
+  </div>
+
+  <h3 class="section-title">Adicionar novo método de pagamento</h3>
+
+  <!-- Adicionar cartão -->
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="assets/img/card 1.svg" alt="">
+    </div>
+
+    <div class="text-block">
+      <p class="item-title">Adicionar um cartão de débito ou crédito</p>
+    </div>
+  </div>
+
+  <!-- Adicionar PayPal -->
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="assets/img/paypal-color-svgrepo-com.svg" alt="">
+    </div>
+
+    <div class="text-block">
+      <p class="item-title">Adicionar uma conta Paypal</p>
+    </div>
+  </div>
+
 </ion-content>

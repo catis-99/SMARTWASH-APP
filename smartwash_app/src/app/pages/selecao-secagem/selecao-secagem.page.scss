@@ -89,17 +89,18 @@ ion-toolbar {
   display: flex;
   justify-content: space-between;
   padding: 20px 16px 40px;
-  color: #fff;
 }
 
 .cancel-btn {
   --border-color: #c4c4cf;
-  --color: #fff;
+  --color: #ffffff;
+  color: #ffffff;
   width: 48%;
 }
 
 .confirm-btn {
   --background: #246bfd;
+  --color: #ffffff;
+  color: #ffffff;
   width: 48%;
-  --color: #fff;
 }

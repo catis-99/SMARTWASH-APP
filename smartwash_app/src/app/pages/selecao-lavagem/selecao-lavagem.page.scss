@@ -96,10 +96,22 @@ ion-title {
   display: flex;
   gap: 12px;
   padding: 16px;
-  --color: #ffff;
 }
 
 .footer-buttons ion-button {
   flex: 1;
-  color: #ffff;
+  --color: #ffffff;
+  color: #ffffff;
+}
+
+.cancel-btn {
+  --border-color: #c4c4cf;
+  --color: #ffffff;
+  color: #ffffff;
+}
+
+.confirm-btn {
+  --background: #246bfd;
+  --color: #ffffff;
+  color: #ffffff;
 }

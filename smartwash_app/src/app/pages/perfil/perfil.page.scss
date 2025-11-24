@@ -153,11 +153,11 @@ ion-header {
         --background: #fff;
         --border-width: 0;
         --border-color: transparent;
-        --min-height: 100px;
+        --min-height: 50px;
         box-shadow: none;
         border: none;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
 
     &::after {
@@ -168,15 +168,16 @@ ion-header {
 ion-toolbar {
     ion-title {
         font-weight: 700;
-        font-size: 32px;
+        font-size: 18px;
         text-align: center;
         color: #000;
-        padding-top: 8px;
+        padding-top: 0;
     }
 
     ion-back-button {
         --color: #4d7cfe;
-        font-size: 28px;
+        font-size: 18px;
+        --icon-font-size: 20px;
         --padding-start: 8px;
     }
 }

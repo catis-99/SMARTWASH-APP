@@ -159,24 +159,24 @@
 
   <div class="tab-container">
 
-    <div class="tab-item" (click)="navigateTo('/home')">
+    <div class="tab-item" [routerLink]="['/home']">
       <ion-icon name="home"></ion-icon>
     </div>
 
-    <div class="tab-item" (click)="navigateTo('/ler-qr')">
+    <div class="tab-item" [routerLink]="['/ler-qr']">
       <ion-icon name="qr-code-outline"></ion-icon>
     </div>
 
     <!-- BOTÃO CENTRAL -->
-    <div class="fab-center" (click)="navigateTo('/reservados')">
+    <div class="fab-center" [routerLink]="['/reservados']">
       <img src="assets/img/logo_menucentral.svg" />
     </div>
 
-    <div class="tab-item" (click)="navigateTo('/historico')">
+    <div class="tab-item" [routerLink]="['/historico']">
       <ion-icon name="time-outline"></ion-icon>
     </div>
 
-    <div class="tab-item" (click)="navigateTo('/perfil')">
+    <div class="tab-item" [routerLink]="['/perfil']">
       <ion-icon name="person-outline"></ion-icon>
     </div>
 

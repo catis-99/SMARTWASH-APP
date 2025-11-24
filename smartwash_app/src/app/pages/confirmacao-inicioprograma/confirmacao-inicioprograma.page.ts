@@ -15,7 +15,10 @@ export class ConfirmacaoInicioprogramaPage implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  goHome() {
+    this.router.navigate(['/home']);
   }
 
 }

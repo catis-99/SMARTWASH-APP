@@ -92,6 +92,18 @@ const routes: Routes = [
     loadComponent: () => import('./pages/intro-slider4/intro-slider4.page').then(m => m.Slider4Page)
   },
   {
+    path: 'intro-slider1',
+    loadComponent: () => import('./pages/intro-slider1/intro-slider1.page').then(m => m.IntroSlider1Page)
+  },
+  {
+    path: 'intro-slider2',
+    loadComponent: () => import('./pages/intro-slider2/intro-slider2.page').then(m => m.IntroSlider2Page)
+  },
+  {
+    path: 'intro-slider3',
+    loadComponent: () => import('./pages/intro-slider3/intro-slider3.page').then(m => m.IntroSlider3Page)
+  },
+  {
     path: 'historico',
     loadComponent: () => import('./pages/historico/historico.page').then(m => m.HistoricoPage)
   },
@@ -110,6 +122,18 @@ const routes: Routes = [
   {
     path: 'apoio-cliente',
     loadComponent: () => import('./pages/apoio-cliente/apoio-cliente.page').then(m => m.ApoioClientePage)
+  },
+  {
+    path: 'notificacoes',
+    loadComponent: () => import('./pages/notificacoes/notificacoes.page').then(m => m.NotificacoesPage)
+  },
+  {
+    path: 'locais-favoritos',
+    loadComponent: () => import('./pages/locais-favoritos/locais-favoritos.page').then(m => m.LocaisFavoritosPage)
+  },
+  {
+    path: 'dados-pessoais',
+    loadComponent: () => import('./pages/dados-pessoais/dados-pessoais.page').then(m => m.DadosPessoaisPage)
   },
 
 ];

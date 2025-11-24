@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { pickerController } from '@ionic/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-reservar',
@@ -21,7 +23,10 @@ export class ReservarPage {
     { day: 'Seg', number: '06', value: 'seg06' }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+  }
 
   async openPicker() {
     const picker = await pickerController.create({
@@ -32,6 +37,13 @@ export class ReservarPage {
       buttons: [{ text: 'Ok', handler: (value: any) => { console.log(value) } }]
     });
     await picker.present();
+  }
 
+  cancelar() {
+    this.router.navigate(['/home']);
+  }
+
+  confirmar() {
+    this.router.navigate(['/confirmacao-reserva']);
   }
 }

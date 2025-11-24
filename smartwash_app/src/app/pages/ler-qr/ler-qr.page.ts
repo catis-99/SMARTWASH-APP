@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule, AlertController } from '@ionic/angular';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Html5Qrcode } from 'html5-qrcode';
 
 @Component({
@@ -10,7 +10,7 @@ import { Html5Qrcode } from 'html5-qrcode';
   templateUrl: './ler-qr.page.html',
   styleUrls: ['./ler-qr.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule]
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule]
 })
 export class LerQrPage implements OnInit, OnDestroy {
   private html5QrCode: Html5Qrcode | null = null;

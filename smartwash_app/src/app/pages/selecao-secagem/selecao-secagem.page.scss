@@ -19,12 +19,15 @@ ion-toolbar {
   padding: 6px 10px;
   border-radius: 8px;
   font-weight: 500;
+  color: #333;
+
 }
 
 .section-title {
   font-size: 18px;
   margin: 20px 16px 10px;
   font-weight: 600;
+  color: #333333;
 }
 
 .machines-grid {
@@ -32,6 +35,8 @@ ion-toolbar {
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   padding: 0 16px;
+  color: #333;
+
 }
 
 .machine-card {
@@ -54,6 +59,8 @@ ion-toolbar {
   font-weight: 600;
   margin-bottom: 2px;
   font-size: 15px;
+  color: #333;
+
 }
 
 .machine-weight {
@@ -64,6 +71,10 @@ ion-toolbar {
 .machine-card.selected {
   background: #246bfd;
   color: #fff;
+
+  img {
+    filter: brightness(0) invert(1);
+  }
 }
 
 .machine-card.selected .machine-weight {
@@ -78,15 +89,17 @@ ion-toolbar {
   display: flex;
   justify-content: space-between;
   padding: 20px 16px 40px;
+  color: #fff;
 }
 
 .cancel-btn {
   --border-color: #c4c4cf;
-  --color: #3f3f46;
+  --color: #fff;
   width: 48%;
 }
 
 .confirm-btn {
   --background: #246bfd;
   width: 48%;
+  --color: #fff;
 }

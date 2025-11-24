@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -20,9 +20,11 @@
 
     <ion-img src="assets/img/confirmar-pagamento.svg" class="illustration"></ion-img>
 
-    <ion-button expand="block" class="start-btn" (click)="iniciarPrograma()">
-      Iniciar Programa
-    </ion-button>
+    <div class="footer">
+      <ion-button expand="block" class="primary-btn" (click)="goHome()">
+        Voltar à página inicial
+      </ion-button>
+    </div>
 
   </div>
 

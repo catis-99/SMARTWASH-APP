@@ -1,0 +1,141 @@
+ion-toolbar {
+    --background: #ffffff;
+    --color: #000000;
+    --min-height: 70px;
+}
+
+ion-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+ion-button {
+    --color: #000000;
+}
+
+ion-content {
+    --background: #f8f9fa;
+}
+
+.content-wrapper {
+    padding: 0 24px 120px 24px;
+}
+
+.search-container {
+    padding: 8px 0 16px 0;
+}
+
+.custom-searchbar {
+    --background: #4d7cfe;
+    --border-radius: 12px;
+    --box-shadow: none;
+    --color: #ffffff;
+    --placeholder-color: rgba(255, 255, 255, 0.7);
+    --icon-color: #ffffff;
+    --min-height: 52px;
+    padding: 0;
+
+    &::part(searchbar) {
+        background: #4d7cfe;
+        border-radius: 12px;
+        min-height: 52px;
+    }
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8e8e93;
+    margin: 24px 0 16px 0;
+}
+
+.locations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.location-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.location-icon {
+    width: 48px;
+    height: 48px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    ion-icon {
+        font-size: 28px;
+        color: #000000;
+    }
+}
+
+.location-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.location-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+.location-address {
+    font-size: 14px;
+    color: #8e8e93;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.map-button-container {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.map-button {
+    --background: #4d7cfe;
+    --background-activated: #3d6ce8;
+    --border-radius: 30px;
+    --padding-start: 32px;
+    --padding-end: 32px;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    --box-shadow: 0 4px 16px rgba(77, 124, 254, 0.3);
+    --color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: none;
+    height: 56px;
+    min-width: 180px;
+    color: #ffffff;
+
+    ion-icon {
+        font-size: 24px;
+        margin-right: 8px;
+        color: #ffffff;
+    }
+}

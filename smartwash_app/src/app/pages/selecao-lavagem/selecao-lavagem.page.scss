@@ -16,6 +16,8 @@ ion-title {
   font-size: 14px;
   align-items: center;
   justify-content: center;
+  color: #333;
+
 
 }
 
@@ -28,12 +30,16 @@ ion-title {
   padding: 6px 10px;
   border-radius: 8px;
   font-weight: 500;
+  color: #333;
+
 }
 
 .section-title {
   font-size: 18px;
   margin: 20px 16px 10px;
   font-weight: 600;
+  color: #333;
+
 }
 
 .machines-grid {
@@ -41,6 +47,7 @@ ion-title {
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   padding: 0 16px;
+  color: #333;
 }
 
 .machine-card {
@@ -63,6 +70,8 @@ ion-title {
   font-weight: 600;
   margin-bottom: 2px;
   font-size: 15px;
+  color: #333;
+
 }
 
 .machine-weight {
@@ -87,7 +96,10 @@ ion-title {
   display: flex;
   gap: 12px;
   padding: 16px;
+  --color: #ffff;
 }
+
 .footer-buttons ion-button {
   flex: 1;
+  color: #ffff;
 }

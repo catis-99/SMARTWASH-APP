@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+      <ion-back-button [defaultHref]="'/home'"></ion-back-button>
     </ion-buttons>
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
@@ -28,7 +28,7 @@
       </ion-item>
 
       <!-- Reservas -->
-      <ion-item class="menu-item" button detail="true" (click)="navigateTo('reservas')">
+      <ion-item class="menu-item" button detail="true" (click)="navigateTo('reservados')">
         <div class="icon-container" slot="start">
           <ion-icon name="checkmark-done" class="menu-icon"></ion-icon>
         </div>
@@ -70,24 +70,24 @@
   </div>
 
   <!-- Bottom Navigation -->
-    <div class="bottom-nav">
-      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('home')">
-        <ion-icon name="home"></ion-icon>
-      </ion-button>
-      <ion-button fill="clear" class="nav-button" (click)="navigateTo('ler-qr')">
-        <ion-icon name="qr-code-outline"></ion-icon>
-      </ion-button>
-      <div class="center-fab">
-        <ion-fab-button (click)="navigateTo('reservados')" class="central-fab">
-          <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
-        </ion-fab-button>
-      </div>
-      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('historico')">
-        <ion-icon name="time-outline"></ion-icon>
-      </ion-button>
-      <ion-button fill="clear" class="nav-button" (click)="navigateTo('perfil')">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-button>
+  <div class="bottom-nav">
+    <ion-button fill="clear" class="nav-button" routerLink="/home">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button" routerLink="/ler-qr">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-button>
+    <div class="center-fab">
+      <ion-fab-button routerLink="/reservados" class="central-fab">
+        <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
+      </ion-fab-button>
     </div>
-    
+    <ion-button fill="clear" class="nav-button" routerLink="/historico">
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button active" routerLink="/perfil">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-button>
+  </div>
+
 </ion-content>

@@ -1,20 +1,24 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-onboarding-step3',
-  templateUrl: './onboarding-step3.page.html',
+  selector: 'app-intro-slider3',
+  templateUrl: './intro-slider3.page.html',
   styleUrls: ['./intro-slider3.page.scss'],
+  standalone: true,
+  imports: [IonicModule, CommonModule]
 })
-export class OnboardingStep3Page {
+export class IntroSlider3Page {
 
   constructor(private router: Router) { }
 
   onSkip() {
-    this.router.navigateByUrl('/home'); // substitui pela tua rota real
+    this.router.navigateByUrl('/intro');
   }
 
   onNext() {
-    this.router.navigateByUrl('/onboarding-step4'); // próxima tela
+    this.router.navigateByUrl('/intro-slider4');
   }
 }

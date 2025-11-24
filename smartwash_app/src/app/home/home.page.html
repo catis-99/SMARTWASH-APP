@@ -3,7 +3,7 @@
     <div class="header-wrapper">
       <h1 class="greeting">Olá, Tiago!</h1>
       <div class="header-icons">
-        <ion-button fill="clear" class="icon-button">
+        <ion-button fill="clear" class="icon-button" routerLink="/notificacoes">
           <ion-icon name="notifications-outline"></ion-icon>
           <span class="badge"></span>
         </ion-button>
@@ -18,7 +18,7 @@
 <ion-content [fullscreen]="true">
 
   <!-- Localização -->
-  <div class="location-card">
+  <div class="location-card" routerLink="/locais-favoritos">
     <div class="location-icon">
       <ion-icon name="location"></ion-icon>
     </div>
@@ -127,18 +127,18 @@
 
   <!-- Bottom Navigation -->
   <div class="bottom-nav">
-    <ion-button fill="clear" class="nav-button active">
+    <ion-button fill="clear" class="nav-button active" routerLink="/home">
       <ion-icon name="home"></ion-icon>
     </ion-button>
     <ion-button fill="clear" class="nav-button" routerLink="/ler-qr">
       <ion-icon name="qr-code-outline"></ion-icon>
     </ion-button>
     <div class="center-fab">
-      <ion-fab-button (click)="navigateTo('reservados')" class="central-fab">
+      <ion-fab-button routerLink="/reservados" class="central-fab">
         <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
       </ion-fab-button>
     </div>
-    <ion-button fill="clear" class="nav-button" routerLink="/reservados">
+    <ion-button fill="clear" class="nav-button" routerLink="/historico">
       <ion-icon name="time-outline"></ion-icon>
     </ion-button>
     <ion-button fill="clear" class="nav-button" routerLink="/perfil">

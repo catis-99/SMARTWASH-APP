@@ -1,14 +1,10 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title></ion-title>
-    </ion-toolbar>
-</ion-header>
+<ion-header translucent></ion-header>
 
 <ion-content fullscreen>
 
     <div class="container">
 
-        <h2 class="title">Scaneia o código QR e paga</h2>
+        <h2 class="title" style="color: #333333;">Scaneia o código QR e paga</h2>
 
         <p class="subtitle">
             Basta efetuar a leitura do código QR na máquina selecionada,
@@ -24,7 +20,7 @@
             <span class="dot active"></span>
         </div>
 
-        <ion-button expand="block" class="btn">
+        <ion-button expand="block" class="btn" (click)="onNext()">
             Avançar
         </ion-button>
 

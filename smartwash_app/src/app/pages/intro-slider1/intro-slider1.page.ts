@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.page.html',
+  selector: 'app-intro-slider1',
+  templateUrl: './intro-slider1.page.html',
   styleUrls: ['./intro-slider1.page.scss'],
+  standalone: true,
+  imports: [IonicModule, CommonModule]
 })
-export class WelcomePage {
+export class IntroSlider1Page {
   constructor(private router: Router) { }
 
-  // Navega para a página principal (ajusta rota conforme a tua app)
   onStart() {
-    // exemplo: this.router.navigateByUrl('/tabs'); ou '/home' ou '/reservas'
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/intro-slider2');
   }
 }

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-    <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -21,7 +21,9 @@
   </div>
 
   <div class="footer">
-    <ion-button expand="block" class="primary-btn">Voltar à página inicial</ion-button>
+    <ion-button expand="block" class="primary-btn" (click)="goHome()">
+      Voltar à página inicial
+    </ion-button>
   </div>
 
 </ion-content>

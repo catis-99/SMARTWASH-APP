@@ -1,218 +1,216 @@
 ion-header {
     ion-toolbar {
-        --background: linear-gradient(135deg, #5d7cff 0%, #5dd8a8 100%);
+        --background: #ffffff;
+        --border-width: 0;
+        --border-color: transparent;
+        box-shadow: none;
+        border: none;
+    }
 
-        ion-title,
-        ion-back-button {
-            --color: white;
-        }
+    &::after {
+        display: none;
     }
 }
 
 ion-content {
-    --background: #f5f5f5;
+    --background: #ffffff;
 }
 
-.scanner-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.qr-container {
+    padding: 80px 24px 32px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 140px);
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 15px;
+    color: #999999;
+    margin: 0 0 60px 0;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 280px;
+}
+
+.qr-scanner {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 32px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-// Container do scanner
 #qr-reader {
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    height: 100%;
 
     video {
         width: 100% !important;
-        border-radius: 12px;
+        height: 100% !important;
         object-fit: cover;
+        border-radius: 12px;
     }
 }
 
-// Overlay com moldura de scanner
-.scanner-overlay {
+.scanner-frame {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     pointer-events: none;
-    z-index: 10;
 
-    .scanner-frame {
-        width: 250px;
-        height: 250px;
-        border: 3px solid #5d7cff;
-        border-radius: 12px;
-        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
-        position: relative;
-        animation: pulse 2s infinite;
+    .corner {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: 4px solid #4d7cfe;
 
-        // Cantos da moldura
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            border: 4px solid #5dd8a8;
-        }
-
-        &::before {
-            top: -4px;
-            left: -4px;
+        &.top-left {
+            top: 0;
+            left: 0;
             border-right: none;
             border-bottom: none;
             border-radius: 12px 0 0 0;
         }
 
-        &::after {
-            bottom: -4px;
-            right: -4px;
+        &.top-right {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+            border-radius: 0 12px 0 0;
+        }
+
+        &.bottom-left {
+            bottom: 0;
+            left: 0;
+            border-right: none;
+            border-top: none;
+            border-radius: 0 0 0 12px;
+        }
+
+        &.bottom-right {
+            bottom: 0;
+            right: 0;
             border-left: none;
             border-top: none;
             border-radius: 0 0 12px 0;
         }
     }
+
+    .scan-line {
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #4d7cfe, transparent);
+        animation: scan 2s ease-in-out infinite;
+    }
 }
 
-@keyframes pulse {
-
-    0%,
-    100% {
-        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+@keyframes scan {
+    0% {
+        top: 10%;
+        opacity: 0;
     }
 
     50% {
-        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+    }
+
+    100% {
+        top: 90%;
+        opacity: 0;
     }
 }
 
-// Instruções
-.instruction {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    z-index: 11;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 16px 24px;
+.qr-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
     border-radius: 12px;
 
-    .scan-icon {
-        font-size: 48px;
-        margin-bottom: 8px;
-    }
-
-    p {
-        margin: 0;
-        font-size: 14px;
-        font-weight: 500;
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
     }
 }
 
-// Container de início
-.start-container {
+.scanning-text {
+    font-size: 16px;
+    color: #999999;
+    margin: 0;
     text-align: center;
-    padding: 24px;
-    max-width: 400px;
-
-    .big-icon {
-        font-size: 120px;
-        color: #5d7cff;
-        margin-bottom: 24px;
-    }
-
-    h2 {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        color: #1a1a1a;
-    }
-
-    p {
-        font-size: 15px;
-        color: #666;
-        margin-bottom: 32px;
-        line-height: 1.5;
-    }
-
-    .start-btn {
-        --background: linear-gradient(135deg, #5d7cff 0%, #5dd8a8 100%);
-        --border-radius: 12px;
-        height: 50px;
-        font-size: 16px;
-        font-weight: 600;
-        text-transform: none;
-    }
 }
 
-// Container de resultado
-.result-container {
-    width: 100%;
-    padding: 24px;
+// Bottom Navigation
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: #4d7cfe;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
 
-    ion-card {
+    .nav-button {
+        --color: rgba(255, 255, 255, 0.6);
+        --padding-start: 0;
+        --padding-end: 0;
         margin: 0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 16px;
+        height: 50px;
+        width: 50px;
 
-        ion-card-header {
-            ion-card-title {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 20px;
-                color: #1a1a1a;
+        &.active {
+            --color: #fff;
 
-                ion-icon {
-                    font-size: 28px;
-                }
+            ion-icon {
+                font-size: 26px;
             }
         }
 
-        ion-card-content {
-            .result-text {
-                background: #f5f5f5;
-                padding: 16px;
-                border-radius: 8px;
-                font-family: monospace;
-                font-size: 14px;
-                color: #333;
-                word-break: break-all;
-                margin-bottom: 20px;
-            }
+        ion-icon {
+            font-size: 24px;
+        }
+    }
 
-            .process-btn {
-                --background: linear-gradient(135deg, #5d7cff 0%, #5dd8a8 100%);
-                --border-radius: 12px;
-                height: 50px;
-                font-size: 16px;
-                font-weight: 600;
-                text-transform: none;
-                margin-bottom: 12px;
-            }
+    .center-fab {
+        position: relative;
+        margin-top: -50px;
 
-            .scan-again-btn {
-                --border-color: #5d7cff;
-                --color: #5d7cff;
-                --border-radius: 12px;
-                height: 50px;
-                font-size: 16px;
-                font-weight: 600;
-                text-transform: none;
+        .central-fab {
+            --background: transparent;
+            --box-shadow: none;
+            width: 80px;
+            height: 80px;
+
+            .fab-logo {
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
             }
         }
     }

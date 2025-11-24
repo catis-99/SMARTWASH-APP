@@ -9,12 +9,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 20px;
-}
-
-/* espaço superior para centrar visual */
-.top-space {
-  height: 40px;
+  padding: 0 24px;
+  height: 100%;
 }
 
 /* bloco central com título, subtítulo e imagem */
@@ -22,47 +18,65 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  text-align: center;
+  padding-top: 120px;
 }
 
 /* título */
 .title {
-  margin: 6px 0 6px;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
-  color: #111;
-  text-align: center;
+  color: #000;
+  margin: 0 0 16px 0;
 }
 
 /* subtítulo */
 .subtitle {
-  margin: 0 0 40px;
-  font-size: 14px;
-  color: #777;
-  text-align: center;
+  font-size: 16px;
+  color: #999;
   max-width: 320px;
+  margin: 0 auto 0 auto;
+  line-height: 1.5;
+}
+
+/* wrapper da ilustração */
+.illustration-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  margin-top: 40px;
 }
 
 /* ilustração grande */
 .big-illustration {
-  width: 220px;
+  width: 200px;
   max-width: 60%;
   height: auto;
   object-fit: contain;
-  margin-top: 24px;
+  margin-top: 180px;
+  margin-bottom: 180px;
 }
 
 /* área inferior com botão */
 .bottom-area {
-  padding-bottom: env(safe-area-inset-bottom);
-  margin-bottom: 12px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 32px);
+  padding-top: 24px;
+  width: 100%;
 }
 
+/* botão iniciar */
 .start-btn {
-  --border-radius: 10px;
-  --padding-top: 12px;
-  --padding-bottom: 12px;
-  --background: #1f6bff; /* azul parecido com o design */
+  --border-radius: 12px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --background: #4d7cfe;
   --box-shadow: none;
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 17px;
+  text-transform: none;
 }

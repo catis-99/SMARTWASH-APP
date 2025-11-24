@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
+      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-title class="title-center">Pagamento</ion-title>
   </ion-toolbar>
@@ -10,7 +10,7 @@
 <ion-content>
 
   <!-- Cupões -->
-  <div class="payment-item">
+  <div class="payment-item" (click)="goToCupoes()">
     <div class="icon-box purple">
       <ion-icon name="ticket" class="menu-icon"></ion-icon>
     </div>
@@ -26,7 +26,7 @@
   <h3 class="section-title">A tua reserva</h3>
 
   <!-- Cartão principal -->
-  <div class="payment-item">
+  <div class="payment-item" (click)="goToConfirmacao()">
     <div class="icon-box card-icon">
       <img src="assets/img/card 1.svg" alt="">
     </div>
@@ -38,7 +38,7 @@
   </div>
 
   <!-- MB WAY -->
-  <div class="payment-item">
+  <div class="payment-item" (click)="goToConfirmacao()">
     <div class="icon-box">
       <img src="assets/img/mbway-seeklogo.svg" alt="">
     </div>
@@ -49,7 +49,7 @@
   </div>
 
   <!-- PayPal -->
-  <div class="payment-item">
+  <div class="payment-item" (click)="goToConfirmacao()">
     <div class="icon-box">
       <img src="assets/img/paypal-color-svgrepo-com.svg" alt="">
     </div>

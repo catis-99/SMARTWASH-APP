@@ -1,7 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-button (click)="cancelar()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-title>Reservar</ion-title>
   </ion-toolbar>
@@ -41,9 +43,11 @@
     </ion-button>
   </div>
 
-  <div class="actions">
-    <ion-button fill="outline" color="medium">Cancelar</ion-button>
-    <ion-button color="primary">Confirmar</ion-button>
-  </div>
+  <ion-footer>
+    <div class="footer-buttons">
+      <ion-button color="medium" expand="block" (click)="cancelar()">Cancelar</ion-button>
+      <ion-button color="primary" expand="block" (click)="confirmar()">Confirmar</ion-button>
+    </div>
+  </ion-footer>
 
 </ion-content>

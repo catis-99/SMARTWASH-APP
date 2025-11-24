@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-slider4',
@@ -12,6 +13,10 @@ import { IonicModule } from '@ionic/angular';
 })
 export class Slider4Page {
 
-    constructor() { }
+    constructor(private router: Router) { }
+
+    onNext() {
+        this.router.navigate(['/intro']);
+    }
 
 }

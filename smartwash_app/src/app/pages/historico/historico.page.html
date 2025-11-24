@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="title-center">Historico</ion-title>
+    <ion-title class="title-center">Histórico</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -106,27 +106,27 @@
 
 
   <!-- Espaçamento para o footer -->
-    <div style="height: 100px;"></div>
+  <div style="height: 100px;"></div>
 
-    <!-- Bottom Navigation -->
-    <div class="bottom-nav">
-      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('home')">
-        <ion-icon name="home"></ion-icon>
-      </ion-button>
-      <ion-button fill="clear" class="nav-button" (click)="navigateTo('ler-qr')">
-        <ion-icon name="qr-code-outline"></ion-icon>
-      </ion-button>
-      <div class="center-fab">
-        <ion-fab-button (click)="navigateTo('reservados')" class="central-fab">
-          <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
-        </ion-fab-button>
-      </div>
-      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('historico')">
-        <ion-icon name="time-outline"></ion-icon>
-      </ion-button>
-      <ion-button fill="clear" class="nav-button" (click)="navigateTo('perfil')">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-button>
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <ion-button fill="clear" class="nav-button" routerLink="/home">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button" routerLink="/ler-qr">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-button>
+    <div class="center-fab">
+      <ion-fab-button routerLink="/reservados" class="central-fab">
+        <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
+      </ion-fab-button>
     </div>
+    <ion-button fill="clear" class="nav-button active" routerLink="/historico">
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button" routerLink="/perfil">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-button>
+  </div>
 
-  </ion-content>
+</ion-content>

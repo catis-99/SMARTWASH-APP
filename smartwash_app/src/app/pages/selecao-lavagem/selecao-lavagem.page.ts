@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-selecao-lavagem',
+  standalone: true,
+  imports: [IonicModule, CommonModule],
   templateUrl: './selecao-lavagem.page.html',
   styleUrls: ['./selecao-lavagem.page.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule]
 })
-export class SelecaoLavagemPage implements OnInit {
+export class SelecaoLavagemPage {
+  constructor(private router: Router) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  cancelar() {
+    this.router.navigate(['/home']);
   }
 
+  confirmar() {
+    this.router.navigate(['/confirmacao-reserva']);
+  }
 }

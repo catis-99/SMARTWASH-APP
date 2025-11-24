@@ -166,7 +166,7 @@ export class MapaPage implements OnInit, AfterViewInit {
           handler: () => {
             // Aqui você pode salvar a localização e navegar para a próxima página
             console.log('Localização confirmada:', this.selectedCoords, this.selectedAddress);
-            this.router.navigate(['/reservar']);
+            this.router.navigate(['/home']);
           }
         }
       ]

@@ -18,22 +18,26 @@
     </p>
 
     <div class="code-inputs">
-      <ion-input maxlength="1" type="text" inputmode="numeric"></ion-input>
-      <ion-input maxlength="1" type="text" inputmode="numeric"></ion-input>
-      <ion-input maxlength="1" type="text" inputmode="numeric"></ion-input>
-      <ion-input maxlength="1" type="text" inputmode="numeric"></ion-input>
+      <ion-input #c1 maxlength="1" type="text" inputmode="numeric"
+                 [(ngModel)]="code1" (ionInput)="onInput(c1,c2)"></ion-input>
+      <ion-input #c2 maxlength="1" type="text" inputmode="numeric"
+                 [(ngModel)]="code2" (ionInput)="onInput(c2,c3)"></ion-input>
+      <ion-input #c3 maxlength="1" type="text" inputmode="numeric"
+                 [(ngModel)]="code3" (ionInput)="onInput(c3,c4)"></ion-input>
+      <ion-input #c4 maxlength="1" type="text" inputmode="numeric"
+                 [(ngModel)]="code4" (ionInput)="onInput(c4)"></ion-input>
     </div>
 
-    <ion-button expand="block" class="btn-confirmar">
+    <ion-button expand="block" class="btn-confirmar" (click)="confirmar()">
       Confirmar
     </ion-button>
 
     <div class="resend">
-      Não recebeste? <span class="link">Reenviar</span>
+      Não recebeste? <button class="link" (click)="reenviar()">Reenviar</button>
     </div>
 
     <div class="login">
-      Já tem conta? <span class="link">Login</span>
+    Já tem conta? <button class="link" (click)="navigateToLogin()">Login</button>
     </div>
 
   </div>

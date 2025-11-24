@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-apoio-cliente',
+  standalone: true,
+  imports: [CommonModule, IonicModule],
   templateUrl: './apoio-cliente.page.html',
   styleUrls: ['./apoio-cliente.page.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule]
 })
-export class ApoioClientePage implements OnInit {
+export class ApoioClientePage {
+  constructor(private router: Router) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  navigateTo(path: string) {
+    this.router.navigate([`/${path}`]);
   }
-
 }

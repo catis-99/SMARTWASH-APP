@@ -1,97 +1,126 @@
-.custom-header {
+/* HEADER */
+.custom-header ion-toolbar,
+.custom-header-toolbar { 
   --background: #1bc9c7;
-  padding-top: 10px;
+  height: 90px;
+
+  
 
   .header-content {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 16px;
+    align-items: center;    /* centra horizontalmente */
+    justify-content: center;/* centra verticalmente */
+    gap: 20px;
+    padding: 10px 0;        /* quitar padding lateral para centrar */
+    padding-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .header-logo {
-    width: 40px;
-    height: 40px;
+  .fab-logo {
+    width: 50px;
+    height: 50px;
   }
 
   .header-title {
-    font-size: 22px;
-    color: white;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin: 0;
+    text-align: center;
   }
 }
 
+/* LISTA DE RESERVAS */
 .reservas-list {
-  padding: 16px;
+  padding: 18px;
+  margin-top: 10px;
 }
 
+/* TARJETA */
 .reserva-card {
-  background: #f6f6f6;
-  border-radius: 12px;
-  padding: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
   display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  margin-bottom: 12px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
 }
 
+/* ICONO */
 .icon-col {
-  width: 45px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-machine {
-  width: 45px;
-  opacity: 0.9;
+  width: 48px;
+  opacity: 0.95;
 }
 
+/* DETALLES */
 .details-col {
   flex: 1;
 }
 
 .tipo {
   margin: 0;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
+  color: #222;
 }
 
 .local {
-  margin-top: -2px;
-  font-size: 13px;
-  color: #666;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #777;
 }
 
 .data {
   margin-top: 6px;
-  color: #1976d2;
-  font-weight: 500;
+  font-size: 14px;
+  color: #1f7bfd;
+  font-weight: 600;
 }
 
+/* BOTÓN */
 .button-col {
   display: flex;
   align-items: center;
 }
 
 .cancel-btn {
-  background: #ff4343;
+  background: #ff4d4d;
   border: none;
   color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
+  padding: 7px 12px;
+  border-radius: 10px;
   font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(255,0,0,0.15);
+  transition: 0.2s;
 }
 
-.bottom-area {
-  text-align: center;
-  margin: 30px 0 40px;
+.cancel-btn:active {
+  transform: scale(0.95);
 }
 
-.home-btn {
-  width: 85%;
-  background: #1f6bff;
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 12px;
+/* FOOTER */
+.footer {
+  padding: 25px 18px 40px;
+}
+
+.primary-btn {
+  height: 50px;
   font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  --background: #1f6bff;
 }

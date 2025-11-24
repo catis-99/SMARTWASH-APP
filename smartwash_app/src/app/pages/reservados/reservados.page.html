@@ -1,7 +1,7 @@
 <ion-header class="custom-header" no-border>
   <ion-toolbar>
     <div class="header-content">
-      <img src="assets/img/logo_menucentral.svg" class="header-logo" />
+      <img src="assets/img/logobranco.svg" alt="SmartWash" class="fab-logo">
       <h1 class="header-title">Reservas</h1>
     </div>
   </ion-toolbar>
@@ -14,7 +14,7 @@
     <!-- CARD 1 -->
     <div class="reserva-card">
       <div class="icon-col">
-        <img src="assets/img/maquina_secar.svg" />
+        <img src="assets/img/maquina_secar.svg" class="icon-machine" />
       </div>
 
       <div class="details-col">
@@ -31,7 +31,7 @@
     <!-- CARD 2 -->
     <div class="reserva-card">
       <div class="icon-col">
-        <img src="assets/img/washing_machine.svg" />
+        <img src="assets/img/washing_machine.svg" class="icon-machine" />
       </div>
 
       <div class="details-col">
@@ -48,7 +48,7 @@
     <!-- CARD 3 -->
     <div class="reserva-card">
       <div class="icon-col">
-        <img src="assets/img/washing_machine.svg" />
+        <img src="assets/img/washing_machine.svg" class="icon-machine" />
       </div>
 
       <div class="details-col">
@@ -58,9 +58,14 @@
       </div>
 
       <div class="button-col">
-        <button class="cancel-btn">Cancelar reserva</button>
+        <button class="cancel-btn">Cancelar reserva</button>      
       </div>
+
     </div>
+
+   <div class="footer">
+     <ion-button class="primary-btn" expand="block" (click)="goHome()">Voltar ao ecrã inicial</ion-button>
+  </div>
 
   </div>
 

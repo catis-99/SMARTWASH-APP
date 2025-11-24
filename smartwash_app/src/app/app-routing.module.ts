@@ -109,7 +109,7 @@ const routes: Routes = [
   },
   {
     path: 'apoio-cliente',
-    loadChildren: () => import('./pages/apoio-cliente/apoio-cliente.module').then( m => m.ApoioClientePageModule)
+    loadComponent: () => import('./pages/apoio-cliente/apoio-cliente.page').then(m => m.ApoioClientePage)
   },
 
 ];

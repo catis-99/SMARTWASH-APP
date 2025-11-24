@@ -1,69 +1,63 @@
-<ion-header translucent>
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+      <ion-back-button defaultHref="/perfil"></ion-back-button>
     </ion-buttons>
-    <ion-title class="toolbar-title">
-      <div class="support-title">
-        <img src="assets/icon/favicon.png" class="support-avatar" alt="avatar">
+    <ion-title>
+      <div class="support-header">
+        <div class="support-avatar">
+          <ion-icon name="headset"></ion-icon>
+        </div>
         <div class="support-info">
-          <div class="name">Suporte</div>
-          <div class="status"><span class="dot"></span> Online</div>
+          <div class="support-name">Suporte</div>
+          <div class="support-status">
+            <span class="status-dot"></span>
+            Online
+          </div>
         </div>
       </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="chat-content" fullscreen>
-  <div class="chat-container">
-    <!-- Example messages matching the screenshot -->
-    <div class="message message-user">
-      Olá! Estou a ter problemas na reserva
-    </div>
-
-    <div class="message message-support">
-      Olá! Como podemos ajudar hoje?
-    </div>
-
-    <div class="message message-user">
-      Posso pagar a reserva desde o telemovel?
-    </div>
-
-    <div class="message message-support large">
-      Lamento, mas de momento não é possível. Para tornar o processo de reserva mais simples, optámos por permitir o pagamento apenas quando estiveres na lavandaria. Desta forma, se não conseguires aparecer, evitamos procedimentos aborrecidos de devolução.
-    </div>
-
-    <div class="message message-user small">
-      Entendo, obrigado!
-    </div>
-
-    <!-- filler messages -->
-    <div class="message message-support muted">
-      There are many programming languages in the market that are used in designing and building websites, various applications and other tasks.
-    </div>
-
-  </div>
-
-  <ion-footer class="chat-footer">
-    <ion-toolbar>
-      <div class="input-wrapper">
-        <ion-input placeholder="Write your message"></ion-input>
-        <button class="mic-btn" aria-label="voice"><ion-icon name="mic"></ion-icon></button>
-        <button class="send-btn" aria-label="send"><ion-icon name="send"></ion-icon></button>
+<ion-content fullscreen>
+  <div class="apoio-container">
+    <div class="chat-container">
+      <!-- Example messages -->
+      <div class="message message-user">
+        Olá! Estou a ter problemas na reserva
       </div>
-    </ion-toolbar>
-  </ion-footer>
 
-  <!-- bottom nav with central floating button -->
-  <div class="bottom-nav">
-    <div class="nav-icons">
-      <ion-icon name="home"></ion-icon>
-      <ion-icon name="qr-code-outline"></ion-icon>
-      <ion-icon name="time-outline"></ion-icon>
-      <ion-icon name="person-outline"></ion-icon>
+      <div class="message message-support">
+        Olá! Como podemos ajudar hoje?
+      </div>
+
+      <div class="message message-user">
+        Posso pagar a reserva desde o telemovel?
+      </div>
+
+      <div class="message message-support">
+        Lamento, mas de momento não é possível. Para tornar o processo de reserva mais simples, optámos por permitir o
+        pagamento apenas quando estiveres na lavandaria. Desta forma, se não conseguires aparecer, evitamos
+        procedimentos aborrecidos de devolução.
+      </div>
+
+      <div class="message message-user">
+        Entendo, obrigado!
+      </div>
     </div>
-    <div class="fab-center"></div>
   </div>
 
+  <!-- Input footer -->
+  <div class="chat-footer">
+    <div class="input-wrapper">
+      <ion-input placeholder="Escreva a sua mensagem"></ion-input>
+      <ion-button fill="clear" class="mic-btn">
+        <ion-icon name="mic" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="send-btn">
+        <ion-icon name="send" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
 </ion-content>

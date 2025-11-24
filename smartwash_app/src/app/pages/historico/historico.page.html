@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar color="white">
-    <ion-title class="title-center">Histórico</ion-title>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-center">Historico</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -61,7 +64,7 @@
     <ion-card-content>
       <div class="row-top">
         <div class="icon-box">
-          <img src="assets/icons/lavagem.png" />
+          <img src="assets/img/washing_machine.svg" />
         </div>
         <div class="info">
           <h3 class="title">Lavagem</h3>
@@ -85,7 +88,7 @@
     <ion-card-content>
       <div class="row-top">
         <div class="icon-box">
-          <img src="assets/icons/lavagem.png" />
+          <img src="assets/img/washing_machine.svg" />
         </div>
         <div class="info">
           <h3 class="title">Lavagem</h3>
@@ -101,19 +104,29 @@
     </ion-card-content>
   </ion-card>
 
-</ion-content>
 
-<!-- Bottom Tabs -->
-<ion-footer>
-  <ion-toolbar class="tabs-toolbar">
-    <div class="tabs-container">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-icon name="reader-outline"></ion-icon>
-      <div class="center-btn">
-        <img src="assets/icons/center-action.png" />
+  <!-- Espaçamento para o footer -->
+    <div style="height: 100px;"></div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('home')">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="nav-button" (click)="navigateTo('ler-qr')">
+        <ion-icon name="qr-code-outline"></ion-icon>
+      </ion-button>
+      <div class="center-fab">
+        <ion-fab-button (click)="navigateTo('reservados')" class="central-fab">
+          <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
+        </ion-fab-button>
       </div>
-      <ion-icon name="time-outline" class="active-tab"></ion-icon>
-      <ion-icon name="person-outline"></ion-icon>
+      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('historico')">
+        <ion-icon name="time-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="nav-button" (click)="navigateTo('perfil')">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
     </div>
-  </ion-toolbar>
-</ion-footer>
+
+  </ion-content>

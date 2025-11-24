@@ -3,11 +3,20 @@ ion-toolbar {
   --border-color: transparent;
 }
 
+ion-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
 .status-block {
   display: flex;
   gap: 12px;
   margin: 16px;
   font-size: 14px;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .status-item {
@@ -76,17 +85,9 @@ ion-toolbar {
 
 .footer-buttons {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 16px 40px;
+  gap: 12px;
+  padding: 16px;
 }
-
-.cancel-btn {
-  --border-color: #c4c4cf;
-  --color: #3f3f46;
-  width: 48%;
-}
-
-.confirm-btn {
-  --background: #246bfd;
-  width: 48%;
+.footer-buttons ion-button {
+  flex: 1;
 }

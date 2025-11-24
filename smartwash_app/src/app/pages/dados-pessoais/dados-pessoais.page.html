@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref=""></ion-back-button>
+      <ion-back-button defaultHref="/perfil"></ion-back-button>
     </ion-buttons>
     <ion-title class="title-center">Dados Pessoais</ion-title>
   </ion-toolbar>
@@ -11,18 +11,21 @@
 
   <!-- Perfil -->
   <div class="profile-container">
-    <img class="profile-img" src="src/img/tiago.svg" alt="Foto do utilizador">
+    <img class="profile-img" src="/assets/img/tiago.svg" alt="Foto do utilizador">
 
     <h2 class="profile-name">Tiago Lourenço</h2>
 
-    <div class="email-box">
-      <ion-icon name="mail-outline"></ion-icon>
-      <span>tiagolourenço@ipvc.pt</span>
-    </div>
   </div>
 
   <!-- Lista de ações -->
   <div class="options-container">
+
+    <div class="option-item">
+      <div class="left">
+        <ion-icon name="mail-outline"></ion-icon>
+        <span>tiagolourenço@ipvc.pt</span>
+      </div>
+    </div>
 
     <div class="option-item">
       <div class="left">
@@ -37,7 +40,7 @@
         <ion-icon name="card-outline"></ion-icon>
         <span>Cartões guardados</span>
       </div>
-      <img src="assets/img/card 1.svg" alt="">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
     </div>
 
     <div class="option-item">
@@ -50,33 +53,28 @@
 
   </div>
 
-  <!-- TAB BAR CUSTOMIZADA -->
-  <ion-footer class="tab-footer">
+  <!-- Espaçamento para o footer -->
+  <div style="height: 100px;"></div>
 
-    <div class="tab-container">
-
-      <div class="tab-item" (click)="navigateTo('/home')">
-        <ion-icon name="home"></ion-icon>
-      </div>
-
-      <div class="tab-item" (click)="navigateTo('/ler-qr')">
-        <ion-icon name="qr-code-outline"></ion-icon>
-      </div>
-
-      <!-- BOTÃO CENTRAL -->
-      <div class="fab-center" (click)="navigateTo('/reservados')">
-        <img src="assets/img/logo_menucentral.svg" />
-      </div>
-
-      <div class="tab-item" (click)="navigateTo('/historico')">
-        <ion-icon name="time-outline"></ion-icon>
-      </div>
-
-      <div class="tab-item" (click)="navigateTo('/perfil')">
-        <ion-icon name="person-outline"></ion-icon>
-      </div>
-
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <ion-button fill="clear" class="nav-button active">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button" routerLink="/ler-qr">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-button>
+    <div class="center-fab">
+      <ion-fab-button (click)="navigateTo('reservados')" class="central-fab">
+        <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
+      </ion-fab-button>
     </div>
+    <ion-button fill="clear" class="nav-button" routerLink="/reservados">
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button" routerLink="/perfil">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-button>
+  </div>
 
-  </ion-footer>
 </ion-content>

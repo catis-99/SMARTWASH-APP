@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
@@ -12,9 +12,7 @@
     <!-- Profile Photo and Name -->
     <div class="profile-header">
       <div class="profile-photo">
-        <!-- Você pode substituir o ion-icon por uma imagem real -->
-        <ion-icon name="person" *ngIf="!userPhoto"></ion-icon>
-        <img [src]="userPhoto" alt="Profile Photo" *ngIf="userPhoto">
+        <img src="/assets/img/tiago.svg" alt="Foto do utilizador">
       </div>
       <h2 class="profile-name">{{ userName }}</h2>
     </div>
@@ -72,23 +70,24 @@
   </div>
 
   <!-- Bottom Navigation -->
-  <div class="bottom-nav">
-    <ion-button fill="clear" (click)="navigateTo('home')">
-      <ion-icon name="home-outline"></ion-icon>
-    </ion-button>
-    <ion-button fill="clear" (click)="navigateTo('scan')">
-      <ion-icon name="qr-code-outline"></ion-icon>
-    </ion-button>
-    <div class="center-fab">
-      <ion-fab-button color="success">
-        <ion-icon name="water"></ion-icon>
-      </ion-fab-button>
+    <div class="bottom-nav">
+      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('home')">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="nav-button" (click)="navigateTo('ler-qr')">
+        <ion-icon name="qr-code-outline"></ion-icon>
+      </ion-button>
+      <div class="center-fab">
+        <ion-fab-button (click)="navigateTo('reservados')" class="central-fab">
+          <img src="assets/img/logo_menucentral.svg" alt="SmartWash" class="fab-logo">
+        </ion-fab-button>
+      </div>
+      <ion-button fill="clear" class="nav-button active" (click)="navigateTo('historico')">
+        <ion-icon name="time-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="nav-button" (click)="navigateTo('perfil')">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
     </div>
-    <ion-button fill="clear" (click)="navigateTo('historico')">
-      <ion-icon name="time-outline"></ion-icon>
-    </ion-button>
-    <ion-button fill="clear" class="active">
-      <ion-icon name="person"></ion-icon>
-    </ion-button>
-  </div>
+    
 </ion-content>

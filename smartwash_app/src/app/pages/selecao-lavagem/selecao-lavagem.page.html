@@ -25,44 +25,44 @@
   <div class="machines-grid">
     <!-- Máquina selecionada -->
     <div class="machine-card selected">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/_2(1).svg" />
       <span class="machine-number">No. 1</span>
       <span class="machine-weight">7 Kg</span>
     </div>
 
     <!-- As restantes -->
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 4</span>
       <span class="machine-weight">7 Kg</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 5</span>
       <span class="machine-weight">8 Kg</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 8</span>
       <span class="machine-weight">6 Kg</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 9</span>
       <span class="machine-weight">7 Kg</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 10</span>
       <span class="machine-weight">8 Kg</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 11</span>
       <span class="machine-weight">7 Kg</span>
     </div>
@@ -72,32 +72,37 @@
 
   <div class="machines-grid reserved">
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 2</span>
       <span class="machine-weight">Faltam 15m</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 3</span>
       <span class="machine-weight">Faltam 20m</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 6</span>
       <span class="machine-weight">Faltam 30m</span>
     </div>
 
     <div class="machine-card">
-      <img src="assets/imgs/wash.png" />
+      <img src="assets/img/washing_machine.svg" />
       <span class="machine-number">No. 7</span>
       <span class="machine-weight">Faltam 10m</span>
     </div>
   </div>
 
-  <div class="action-btn-wrapper">
-    <ion-button expand="block" color="primary">Avançar</ion-button>
+    <ion-footer>
+  <div class="footer-buttons">
+    <ion-button color="medium" expand="block" (click)="cancelar()">Cancelar</ion-button>
+    <ion-button color="primary" expand="block" (click)="confirmar()">Confirmar</ion-button>
   </div>
+</ion-footer>
+
+
 
 </ion-content>

@@ -22,10 +22,14 @@ ion-header::after {
     display: none;
 }
 
-.ajuda-content {
-    --background: #ffffff;
-    padding: 32px 32px 0;
+ion-content.ajuda-content {
+  --background: #ffffff;
+  --padding-start: 32px;
+  --padding-end: 32px;
+  --padding-top: 32px;
+  --padding-bottom: 0;
 }
+
 
 /* Header */
 .title {

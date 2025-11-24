@@ -107,6 +107,10 @@ const routes: Routes = [
     path: 'cupoes',
     loadComponent: () => import('./pages/cupoes/cupoes.page').then(m => m.CupoesPage)
   },
+  {
+    path: 'dados-pessoais',
+    loadComponent: () => import('./pages/dados-pessoais/dados-pessoais.page').then(m => m.DadosPessoaisPage)
+  },
 ];
 
 @NgModule({

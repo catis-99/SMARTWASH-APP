@@ -1,35 +1,26 @@
 <ion-content class="intro-content">
-    <div class="intro-container">
-        <!-- Logo e título -->
-        <div class="logo-section">
-            <h1 class="app-title">
-                Smart<span class="title-highlight">Wash</span>
-            </h1>
+  <div class="intro-container">
 
-            <!-- Ilustração da máquina de lavar -->
-            <div class="illustration">
-                <div class="washing-machine">
-                    <div class="machine-top"></div>
-                    <div class="machine-body">
-                        <div class="machine-door">
-                            <div class="door-glass"></div>
-                        </div>
-                    </div>
-                    <div class="detergent-bottle"></div>
-                    <div class="towels"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Botões de ação -->
-        <div class="buttons-section">
-            <ion-button expand="block" class="btn-primary" (click)="navigateTo('/login')">
-                Iniciar sessão
-            </ion-button>
-
-            <ion-button expand="block" class="btn-secondary" (click)="navigateTo('/registo')">
-                Criar conta
-            </ion-button>
-        </div>
+    <!-- Logo e título (title acima da imagem) -->
+    <div class="logo-section">
+      <div class="logo-wrapper">
+        <h1 class="app-title overlay">
+          Smart<span class="title-highlight">Wash</span>
+        </h1>
+         <ion-img src="assets/img/maquina_lavar.svg"  class="logo-image" alt="Maquina lavar"></ion-img>
+      </div>
     </div>
+
+    <!-- Botões de ação -->
+    <div class="buttons-section">
+      <ion-button expand="block" class="btn-primary" (click)="navigateTo('/login')">
+        Iniciar sessão
+      </ion-button>
+
+      <ion-button expand="block" class="btn-secondary" (click)="navigateTo('/registo')">
+        Criar conta
+      </ion-button>
+    </div>
+
+  </div>
 </ion-content>

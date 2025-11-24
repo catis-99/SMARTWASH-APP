@@ -1,13 +1,69 @@
-<ion-header [translucent]="true">
+<ion-header translucent>
   <ion-toolbar>
-    <ion-title>apoio-cliente</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="toolbar-title">
+      <div class="support-title">
+        <img src="assets/icon/favicon.png" class="support-avatar" alt="avatar">
+        <div class="support-info">
+          <div class="name">Suporte</div>
+          <div class="status"><span class="dot"></span> Online</div>
+        </div>
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content class="chat-content" fullscreen>
+  <div class="chat-container">
+    <!-- Example messages matching the screenshot -->
+    <div class="message message-user">
+      Olá! Estou a ter problemas na reserva
+    </div>
+
+    <div class="message message-support">
+      Olá! Como podemos ajudar hoje?
+    </div>
+
+    <div class="message message-user">
+      Posso pagar a reserva desde o telemovel?
+    </div>
+
+    <div class="message message-support large">
+      Lamento, mas de momento não é possível. Para tornar o processo de reserva mais simples, optámos por permitir o pagamento apenas quando estiveres na lavandaria. Desta forma, se não conseguires aparecer, evitamos procedimentos aborrecidos de devolução.
+    </div>
+
+    <div class="message message-user small">
+      Entendo, obrigado!
+    </div>
+
+    <!-- filler messages -->
+    <div class="message message-support muted">
+      There are many programming languages in the market that are used in designing and building websites, various applications and other tasks.
+    </div>
+
+  </div>
+
+  <ion-footer class="chat-footer">
     <ion-toolbar>
-      <ion-title size="large">apoio-cliente</ion-title>
+      <div class="input-wrapper">
+        <ion-input placeholder="Write your message"></ion-input>
+        <button class="mic-btn" aria-label="voice"><ion-icon name="mic"></ion-icon></button>
+        <button class="send-btn" aria-label="send"><ion-icon name="send"></ion-icon></button>
+      </div>
     </ion-toolbar>
-  </ion-header>
+  </ion-footer>
+
+  <!-- bottom nav with central floating button -->
+  <div class="bottom-nav">
+    <div class="nav-icons">
+      <ion-icon name="home"></ion-icon>
+      <ion-icon name="qr-code-outline"></ion-icon>
+      <ion-icon name="time-outline"></ion-icon>
+      <ion-icon name="person-outline"></ion-icon>
+    </div>
+    <div class="fab-center"></div>
+  </div>
+
 </ion-content>

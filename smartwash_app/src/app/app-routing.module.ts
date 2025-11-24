@@ -107,6 +107,11 @@ const routes: Routes = [
     path: 'cupoes',
     loadComponent: () => import('./pages/cupoes/cupoes.page').then(m => m.CupoesPage)
   },
+  {
+    path: 'apoio-cliente',
+    loadChildren: () => import('./pages/apoio-cliente/apoio-cliente.module').then( m => m.ApoioClientePageModule)
+  },
+
 ];
 
 @NgModule({

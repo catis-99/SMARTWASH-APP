@@ -5,10 +5,10 @@
 .intro-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 60px 20px 40px;
+    padding: 100px 20px 40px;
 }
 
 .logo-section {
@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 8px;
 }
 
 .app-title {
@@ -27,193 +28,60 @@
     margin-bottom: 80px;
     letter-spacing: 2px;
     text-align: center;
-
-    .title-highlight {
-        font-weight: 700;
-    }
 }
 
-// Ilustração da máquina de lavar
-.illustration {
+.app-title .title-highlight {
+    font-weight: 700;
+}
+
+/* Logo wrapper and overlay title */
+.logo-wrapper {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 8px 0 24px;
 }
-
-.washing-machine {
-    position: relative;
+.logo-image {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: contain;
+    display: block;
 }
 
-// Círculo de fundo
-.illustration::before {
-    content: '';
+.app-title.overlay {
     position: absolute;
-    width: 240px;
-    height: 240px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    z-index: 0;
-}
-
-// Corpo da máquina (frasco de detergente estilizado)
-.machine-body {
-    position: absolute;
-    width: 120px;
-    height: 140px;
-    background: white;
-    border-radius: 15px;
-    z-index: 2;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    bottom: calc(100% + 16px); /* place title above the image */
     left: 50%;
     transform: translateX(-50%);
-    bottom: 45px;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    pointer-events: none;
 }
 
-.machine-top {
-    position: absolute;
-    width: 80px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 8px 8px 0 0;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-
-    &::before {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 12px;
-        background: linear-gradient(to right, #5dd8a8, #4db89a, #3d9f8c);
-        border-radius: 4px;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
+@media (max-width: 420px) {
+    .intro-container {
+        padding: 80px 16px 32px;
     }
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 12px;
-        background: rgba(93, 124, 255, 0.3);
-        border-radius: 4px;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
+    .logo-wrapper {
+        width: 200px;
+        height: 200px;
+        margin: 6px 0 18px;
+    }
+
+    .app-title.overlay {
+        font-size: 28px;
+        bottom: calc(100% + 12px);
     }
 }
 
-// Porta circular (tambor)
-.machine-door {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #4a90e2, #5d7cff);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.door-glass {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
-    border-radius: 50%;
-    position: relative;
-
-    // Pontos no tambor
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 50%;
-    }
-
-    &::before {
-        top: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    &::after {
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-// Toalhas empilhadas
-.towels {
-    position: absolute;
-    right: 20px;
-    bottom: 50px;
-    z-index: 3;
-
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        width: 90px;
-        height: 12px;
-        border-radius: 2px;
-    }
-
-    // Toalha azul
-    &::before {
-        background: linear-gradient(to right, #5d7cff, #7b97ff);
-        top: 0;
-    }
-
-    // Toalhas coloridas empilhadas
-    &::after {
-        background: linear-gradient(to bottom,
-                #5d7cff 0%,
-                #5d7cff 20%,
-                #ffd65d 20%,
-                #ffd65d 40%,
-                #ff9a5d 40%,
-                #ff9a5d 60%,
-                #5dd8a8 60%,
-                #5dd8a8 80%,
-                #7b97ff 80%,
-                #7b97ff 100%);
-        top: 15px;
-        height: 50px;
-    }
-}
-
-// Pontos decorativos (estrelas de avaliação)
-.illustration::after {
-    content: '★ ★ ★ ★ ★';
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    color: #ffb65d;
-    letter-spacing: 8px;
-    z-index: 1;
-}
-
-// Botões
+/* Botões */
 .buttons-section {
     width: 100%;
     max-width: 340px;

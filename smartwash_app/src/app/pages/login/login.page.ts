@@ -15,14 +15,14 @@ export class LoginPage {
   username: string = '';
   password: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   onLogin() {
     if (this.username && this.password) {
       console.log('Login:', this.username);
       this.router.navigate(['/home']);
     } else {
-      alert('Por favor completa todos los campos');
+      alert('Por favor completa todos os campos');
     }
   }
 

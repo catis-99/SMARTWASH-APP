@@ -36,7 +36,7 @@ export class ValidacaoTelemovelPage implements OnInit {
     this.checkAndSetComplete();
   }
 
-   private checkAndSetComplete() {
+  private checkAndSetComplete() {
     const full = `${this.code1}${this.code2}${this.code3}${this.code4}`;
     this.codeComplete = (full.length === 4);
   }
@@ -47,7 +47,7 @@ export class ValidacaoTelemovelPage implements OnInit {
       this.navigating = true;
       this.router.navigate(['/mapa']).finally(() => this.navigating = false);
     } else {
-      alert('Introduce los 4 dígitos para continuar');
+      alert('Introduce os 4 dígitos para continuar');
     }
   }
 

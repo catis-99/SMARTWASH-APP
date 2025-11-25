@@ -48,6 +48,26 @@ ion-toolbar {
     --background: #ffffff;
 }
 
+/* Centralizar títulos mesmo com back button */
+ion-toolbar {
+    ion-title {
+        text-align: center;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
 :root {
     --ion-font-family: 'Poppins', sans-serif;
 }
